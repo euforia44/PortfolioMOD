@@ -53,11 +53,11 @@ Bot przetworzy dane i wyśle profesjonalnie wyglądającą grafikę portfolio!
 Mod został stworzony i jest rozwijany przez euforia.44.
 
 # [PORTFOLIO MOD]
-```author: euforia.44``
-```wersja: 6.8.0```
-## Zmiany:
-- Naprawiono krytyczny błąd `DiscordAPIError[10008]: Unknown Message`, który występował przy nieprawidłowej konfiguracji komendy. Logika odpowiedzi na interakcję została całkowicie przepisana dla większej stabilności.
-- Ulepszono obsługę błędów dla opcji `watermark`. Jeśli opcja w komendzie slash będzie miała zły typ, bot wyświetli w konsoli precyzyjny komunikat, nie powodując już awarii.
-- Całkowicie usunięto mechanizm sprawdzania autora moda.
-- Usunięto zbędny tekst informacyjny z zakładki 'Obraz' w interfejsie moda.
-- Poprawiono i ujednoznaczniono kolejność rysowania warstw na grafice.
+author: euforia.44
+wersja: 6.9.0
+
+Zmiany:
+
+- Naprawiono krytyczny błąd `Unknown Message` przy dodawaniu reakcji. Główna wiadomość z grafiką jest teraz zawsze publiczna, co pozwala na stabilne dodawanie reakcji i jest widoczne dla wszystkich użytkowników.
+- Usprawniono logikę odpowiedzi na interakcję. Po wysłaniu publicznej grafiki, tymczasowa, prywatna wiadomość "Bot myśli..." jest automatycznie usuwana, aby zachować czystość na kanale.
+- Zmieniono logikę wysyłania wiadomości na wskazany kanał (`targetChannelID`), aby była bardziej odporna na błędy. Jeśli wysłanie na kanał docelowy się nie uda, bot wyśle grafikę na kanale, gdzie użyto komendy.
