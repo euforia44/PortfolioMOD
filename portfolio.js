@@ -3,7 +3,7 @@ module.exports = {
   *                                                                                                *
   *                                        PORTFOLIO MOD                                           *
   *                                       Autor: euforia.44                                        *
-  *                                         Wersja: 7.1.0                                          *
+  *                                         Wersja: 7.2.0                                          *
   *                                                                                                *
   *   Ten mod i jego kod źródłowy są własnością intelektualną autora.                               *
   *   Zabrania się redystrybucji, modyfikacji lub sprzedaży bez wyraźnej zgody autora.              *
@@ -14,7 +14,7 @@ module.exports = {
   displayName: "Portfolio Mod",
   section: "Canvas",
   author: "euforia.44",
-  version: "7.1.0",
+  version: "7.2.0",
   short_description: "Zaawansowany generator grafik portfolio z licznymi opcjami personalizacji.",
 
   subtitle(data) {
@@ -132,7 +132,7 @@ module.exports = {
     const MOD_NAME = "[Portfolio Mod]";
 
     const defaults = {
-        embedColor: "#ea29d1", mainImageScale: 60, cornerRadius: 50,
+        mainImageScale: 60, cornerRadius: 50,
         shadowColor: "#000000", shadowBlur: 15, shadowOffsetX: 0, shadowOffsetY: 10,
         fontPath: "fonts/proxima.otf", fontSize: 180, fontColor: "#FFFFFF",
         textVerticalAlign: "top", watermarkTransparency: 35,
@@ -154,10 +154,21 @@ module.exports = {
         return fontSize;
     };
 
+    const fetchWithTimeout = async (url, timeout = 30000) => {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeout);
+        try {
+            const response = await fetch(url, { signal: controller.signal });
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return response.arrayBuffer();
+        } finally {
+            clearTimeout(timeoutId);
+        }
+    };
+
     if (interaction && typeof interaction.deferReply === 'function' && !interaction.deferred) {
-      try {
-        await interaction.deferReply({ flags: MessageFlags.Ephemeral });
-      } catch (e) { return console.error(`${MOD_NAME} Nie udało się odroczyć odpowiedzi:`, e); }
+      try { await interaction.deferReply({ flags: MessageFlags.Ephemeral }); } 
+      catch (e) { return console.error(`${MOD_NAME} Nie udało się odroczyć odpowiedzi:`, e); }
     }
     
     const requiredRoleID = getVal("requiredRoleID");
@@ -172,42 +183,32 @@ module.exports = {
       const canvas = Canvas.createCanvas(canvasWidth, canvasHeight);
       const ctx = canvas.getContext("2d");
 
-      // Warstwa 1 Tło
+      // Warstwa Tła
       const backgroundImageURL = getVal("backgroundImageURL");
       if (backgroundImageURL) {
         try {
           const background = await Canvas.loadImage(backgroundImageURL);
           ctx.drawImage(background, 0, 0, canvasWidth, canvasHeight);
-        } catch (error) { console.error(`${MOD_NAME} Błąd ładowania obrazu tła.`, error); }
+        } catch (error) { throw new Error(`Nie udało się załadować obrazu tła z URL: ${backgroundImageURL}. Błąd: ${error.message}`); }
       }
 
-      // Warstwa 2 Załącznik
+      // Warstwa Załącznika
       const imageAttachment = interaction.options.getAttachment('zalacznik');
       let mainImageY = canvasHeight / 2, mainImageHeight = 0;
 
       if (imageAttachment?.url) {
         try {
-          const imageBuffer = await (await fetch(imageAttachment.url)).arrayBuffer();
+          const imageBuffer = await fetchWithTimeout(imageAttachment.url);
           const pngBuffer = await sharp(Buffer.from(imageBuffer)).toFormat('png').toBuffer();
           const mainImage = await Canvas.loadImage(pngBuffer);
           const scale = parseIntWithDefault(getVal("mainImageScale"), defaults.mainImageScale) / 100;
           const radius = parseIntWithDefault(getVal("cornerRadius"), defaults.cornerRadius);
-          const boxWidth = canvasWidth * Math.max(0.1, Math.min(1, scale));
-          const boxHeight = canvasHeight * Math.max(0.1, Math.min(1, scale));
-          const boxAspectRatio = boxWidth / boxHeight;
+          const boxWidth = canvasWidth * Math.max(0.1, Math.min(1, scale)); const boxHeight = canvasHeight * Math.max(0.1, Math.min(1, scale));
           const imageAspectRatio = mainImage.width / mainImage.height;
-          let destWidth, destHeight;
-          if (imageAspectRatio > boxAspectRatio) {
-            destWidth = boxWidth;
-            destHeight = boxWidth / imageAspectRatio;
-          } else {
-            destHeight = boxHeight;
-            destWidth = boxHeight * imageAspectRatio;
-          }
-          const x = (canvasWidth - destWidth) / 2;
-          const y = (canvasHeight - destHeight) / 2;
-          mainImageY = y;
-          mainImageHeight = destHeight;
+          let destWidth = (imageAspectRatio > (boxWidth / boxHeight)) ? boxWidth : boxHeight * imageAspectRatio;
+          let destHeight = (imageAspectRatio > (boxWidth / boxHeight)) ? boxWidth / imageAspectRatio : boxHeight;
+          const x = (canvasWidth - destWidth) / 2; const y = (canvasHeight - destHeight) / 2;
+          mainImageY = y; mainImageHeight = destHeight;
           ctx.save();
           ctx.beginPath();
           ctx.moveTo(x + radius, y); ctx.lineTo(x + destWidth - radius, y); ctx.arcTo(x + destWidth, y, x + destWidth, y + radius, radius);
@@ -221,7 +222,7 @@ module.exports = {
             ctx.fillStyle = "rgba(0,0,0,0.01)"; ctx.fill();
           }
           ctx.clip(); ctx.drawImage(mainImage, x, y, destWidth, destHeight); ctx.restore();
-        } catch (error) { console.error(`${MOD_NAME} Błąd rysowania grafiki głównej.`, error); }
+        } catch (error) { throw new Error(`Nie udało się załadować załącznika. Upewnij się, że link jest poprawny i publicznie dostępny. Błąd: ${error.message}`); }
       }
       
       const unsafeFontPath = getVal("fontPath") || defaults.fontPath;
@@ -255,22 +256,19 @@ module.exports = {
                 ctx.restore();
             }
             
-            // Warstwa 1 Dodatkowa (Ramka)
+            // Warstwa Ramki
             const topLayerImageURL = getVal("topLayerImageURL");
             if (topLayerImageURL) {
               try {
                 const topImage = await Canvas.loadImage(topLayerImageURL);
                 ctx.drawImage(topImage, 0, 0, canvasWidth, canvasHeight);
-              } catch (error) { console.error(`${MOD_NAME} Błąd ładowania ramki.`, error); }
+              } catch (error) { throw new Error(`Nie udało się załadować obrazu ramki z URL: ${topLayerImageURL}. Błąd: ${error.message}`); }
             }
 
-            // Watermark Warstwa
+            // Warstwa Znaku Wodnego
             let watermarkText;
-            try {
-              watermarkText = interaction.options.getString('watermark');
-            } catch (error) {
-              if (error.code === 'CommandInteractionOptionType') console.error(`${MOD_NAME} Błąd konfiguracji: Typ opcji 'watermark' musi być 'String' (Tekst).`);
-            }
+            try { watermarkText = interaction.options.getString('watermark'); } 
+            catch (error) { if (error.code === 'CommandInteractionOptionType') console.error(`${MOD_NAME} Błąd konfiguracji: Typ opcji 'watermark' musi być 'String' (Tekst).`); }
       
             if (watermarkText) {
                 const transparencyValue = parseIntWithDefault(getVal("watermarkTransparency"), defaults.watermarkTransparency);
@@ -281,32 +279,21 @@ module.exports = {
                 ctx.fillText(watermarkText, canvasWidth - 20, canvasHeight - 20);
                 ctx.globalAlpha = 1.0;
             }
-        } catch (error) { console.error(`${MOD_NAME} Błąd podczas operacji na tekście.`, error); }
+        } catch (error) { throw new Error(`Błąd podczas operacji na tekście lub czcionkach. Upewnij się, że plik czcionki istnieje. Błąd: ${error.message}`); }
       }
       
       const attachment = new AttachmentBuilder(canvas.toBuffer("image/png"), { name: "portfolio.png" });
       const { guild } = interaction;
-      const serverIcon = guild.iconURL({ extension: "png", size: 128 });
-      const timestamp = new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' });
-      const colorInput = getVal("embedColor");
-
       const embed = new EmbedBuilder()
-          .setColor(typeof colorInput === 'string' && colorInput.startsWith('#') ? colorInput : defaults.embedColor)
-          .setImage("attachment://portfolio.png").setTitle(getVal("embedTitle") || null).setDescription(getVal("embedDesc") || null)
-          .setThumbnail(serverIcon).setFooter({ text: `${guild.name} • ${timestamp}`, iconURL: serverIcon });
-
-      const realizator = getVal("realizatorField");
-      const dlaKogo = getVal("dlaKogoField");
-      if (realizator || dlaKogo) {
-        embed.addFields({ name: "Wykonane przez:", value: realizator || " ", inline: true }, { name: "Dla kogo:", value: dlaKogo || " ", inline: true });
+          .setColor(getVal("embedColor") || '#ea29d1').setImage("attachment://portfolio.png").setTitle(getVal("embedTitle") || null).setDescription(getVal("embedDesc") || null)
+          .setThumbnail(guild.iconURL({ extension: "png", size: 128 })).setFooter({ text: `${guild.name} • ${new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' })}`, iconURL: guild.iconURL() });
+      if (getVal("realizatorField") || getVal("dlaKogoField")) {
+        embed.addFields({ name: "Wykonane przez:", value: getVal("realizatorField") || " ", inline: true }, { name: "Dla kogo:", value: getVal("dlaKogoField") || " ", inline: true });
       }
-      
-      const messagePayload = { embeds: [embed], files: [attachment] };
       
       const targetChannelID = getVal("targetChannelID");
       const finalChannel = targetChannelID ? await guild.channels.fetch(targetChannelID).catch(() => interaction.channel) : interaction.channel;
-
-      const sentMessage = await finalChannel.send(messagePayload);
+      const sentMessage = await finalChannel.send({ embeds: [embed], files: [attachment] });
       
       await interaction.editReply({ content: 'Grafika została pomyślnie wysłana.', embeds: [], files: [] });
       
@@ -319,7 +306,11 @@ module.exports = {
 
     } catch (error) {
       console.error(`${MOD_NAME} Wystąpił krytyczny błąd:`, error);
-      await interaction.editReply({ content: "Wystąpił nieoczekiwany błąd. Sprawdź konsolę bota.", embeds: [], files: [] }).catch(() => {});
+      let errorMessage = "Wystąpił nieoczekiwany błąd. Sprawdź konsolę bota.";
+      if (error.message.includes('Timeout') || error.code === 'UND_ERR_CONNECT_TIMEOUT') {
+          errorMessage = `Błąd sieciowy: Nie udało się pobrać jednego z obrazów (np. z załącznika). Sprawdź swoje połączenie internetowe lub spróbuj ponownie później.`;
+      }
+      await interaction.editReply({ content: errorMessage, embeds: [], files: [] }).catch(() => {});
     } finally {
       this.callNextAction(cache);
     }
