@@ -1,6 +1,7 @@
 # Portfolio Mod
 
 Mod do DBM, który automatyzuje proces tworzenia profesjonalnych grafik portfolio. Idealny dla serwerów graficznych, artystów i społeczności kreatywnych. 
+![{2423F01C-54DA-4BD2-943C-8223FEAA76FC}](https://github.com/user-attachments/assets/d3f72faa-4cec-486a-a241-896ccca8dc56)
 
 # ⚙️ Instalacja i Konfiguracja
 
@@ -48,7 +49,6 @@ Po skonfigurowaniu, użyj komendy na swoim serwerze Discord:
 /portfolio wykonawca: @uzytkownik1 dla_kogo: @uzytkownik2 zalacznik: [TWOJA_GRAFIKA.PNG] watermark: [TWOJ_WATERMARK.PNG]
 ![{A98551A9-02C0-4BBA-BC49-7E312FF02A75}](https://github.com/user-attachments/assets/179e317a-22d9-49ba-8036-f7817de68cf5)
 Bot przetworzy dane i wyśle profesjonalnie wyglądającą grafikę portfolio!
-![{B5FD4E2B-E804-4794-B735-9CD7D4556676}](https://github.com/user-attachments/assets/d07e905a-0435-4b79-bf20-05cc266ffeeb)
 # ❤️ Autor
 Mod został stworzony i jest rozwijany przez euforia.44.
 
