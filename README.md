@@ -1,49 +1,63 @@
-```Kompatybilne z Discord Bot Maker | v14 (nie testowano na wersji v13)```
-# Portfolio MOD
-Dodaj swoją pracę do portfolio! Użyj komendy: /portfolio [wykonawca] [dla kogo] [załącznik]
-![{167B6681-F4A5-45AE-AB8B-40D0DF72157F}](https://github.com/user-attachments/assets/cc5aadfb-61ed-463b-8ec3-2dc8b7b47858)
+# Portfolio Mod
 
-## 🛠️ **Konfiguracja komendy `/portfolio` w ustawieniach**
+Mod do DBM, który automatyzuje proces tworzenia profesjonalnych grafik portfolio. Idealny dla serwerów graficznych, artystów i społeczności kreatywnych. 
 
-W panelu **Settings** możesz w pełni dostosować wygląd i działanie komendy `/portfolio`. Oto dostępne opcje:
-![{EB2DDAAD-B27D-4B9F-B2FD-84338F5D3AAD}](https://github.com/user-attachments/assets/ea632d2e-0bc3-4e47-93b8-91d158efd8d4)
+# ⚙️ Instalacja i Konfiguracja
 
-### 🎚️ **Dostęp i uprawnienia**
+##  Krok 1: Wymagania Systemowe
 
-* **Rola z dostępem** – Wybierz rolę, która ma mieć dostęp do używania tej komendy (id roli discord)
-![{228CB791-7835-4F14-9B06-A234F06E0D74}](https://github.com/user-attachments/assets/bbac5699-bae3-4d6b-a519-3af95c57dd9c)
+Przed instalacją moda, upewnij się, że masz zainstalowane niezbędne pakiety. Otwórz konsolę (CMD, PowerShell, Terminal) w głównym folderze swojego bota i wpisz poniższe komendy:
+![{9E11A53C-160B-4010-B0EA-73E9F3FBB211}](https://github.com/user-attachments/assets/b85f3112-f43f-49b0-a319-4583057ef52a)
 
+```bash
+npm i canvas
+npm i sharp
+```
+## Krok 2: Instalacja Moda
+Pobierz plik .js tego moda.
+Umieść go w folderze /actions swojego projektu Discord Bot Maker.
+Uruchom ponownie DBM. Mod powinien pojawić się na liście akcji w sekcji "Canvas".
 
-### 🖼️ **Ustawienia embedu**
+##  Krok 3: Tworzenie Komendy Slash
+W edytorze komend DBM stwórz nową komendę slash (np. /portfolio). Musi ona zawierać następujące parametry:
+Wykonawca - Typ: User (Wymagany)
+dla kogo - Typ: User (Wymagany)
+zalacznik - Typ: Attachment (Wymagany) - Nazwa musi brzmieć DOKŁADNIE zalacznik!
+watermark - Typ: String (Opcjonalny)
 
-* **Tytuł embedu** – Tekst wyświetlany jako nagłówek (np. „Nowa praca w portfolio!”).
-* **Kolor embedu** – Pasek boczny w kolorze HEX (np. `#5865F2`).
-* **Opis embedu** – Krótki tekst informacyjny o pracy, widoczny pod tytułem.
-* **URL obrazu** – Obraz z **drugiej wiadomości** użytkownika (musi być to link.
+![{662A3C82-2776-49BC-8116-1CA7D752E644}](https://github.com/user-attachments/assets/927032d3-426c-4ed6-ac06-89b483193e89)
 
-![{DFA682F4-AEDE-42B7-B4CA-819A377F4F23}](https://github.com/user-attachments/assets/208f597a-77b7-4eb3-8bec-38cef26b8410)
+## Krok 4: Konfiguracja Akcji
+Dodaj akcję "Portfolio Mod" do swojej nowej komendy. W ustawieniach akcji znajdziesz trzy zakładki:
+![{4181A048-36E4-43A0-B6A3-FF80192F390B}](https://github.com/user-attachments/assets/16fd966e-5a5b-47f2-a640-b73be7fc5a98)
+### Settings 1:
+ID Roli z Uprawnieniami: Wklej ID roli, która może używać komendy. Zostaw puste, aby zezwolić wszystkim.
+ID Kanału do Wysyłki: Wklej ID kanału, na który mają być wysyłane grafiki. Zostaw puste, aby bot odpowiadał na kanale, gdzie użyto komendy.
+Możesz tu również dostosować wygląd embedu (tytuł, opis, kolor).
+### Settings 2:
+Skonfiguruj główny tekst na obrazie (treść, czcionka, rozmiar, kolor).
+Wyrównanie Tekstu w Pionie: Wybierz, czy tekst ma się pojawić nad główną grafiką (Góra), czy pod nią (Dół).
+### Obraz:
+Dostosuj wygląd głównej grafiki (skala, zaokrąglenie, cień).
+Przezroczystość Znaku Wodnego: Ustaw widoczność znaku wodnego w procentach (np. 35%).
+Zmień domyślne tło lub ramkę, wklejając linki URL.
+![{EA0BF29D-4F8D-4E72-89D7-97407D5E907E}](https://github.com/user-attachments/assets/8eb21312-f521-4483-9b5b-1aaadea31645)
 
-### 🖌️ **Tekst na obrazie (nakładka)**
+#  🚀 Użycie Komendy
+Po skonfigurowaniu, użyj komendy na swoim serwerze Discord:
+/portfolio wykonawca: @uzytkownik1 dla_kogo: @uzytkownik2 zalacznik: [TWOJA_GRAFIKA.PNG] watermark: [TWOJ_WATERMARK.PNG]
+![{A98551A9-02C0-4BBA-BC49-7E312FF02A75}](https://github.com/user-attachments/assets/179e317a-22d9-49ba-8036-f7817de68cf5)
+Bot przetworzy dane i wyśle profesjonalnie wyglądającą grafikę portfolio!
+![{B5FD4E2B-E804-4794-B735-9CD7D4556676}](https://github.com/user-attachments/assets/d07e905a-0435-4b79-bf20-05cc266ffeeb)
+# ❤️ Autor
+Mod został stworzony i jest rozwijany przez euforia.44.
 
-> System automatycznie dodaje tekst na przesłanym obrazie (na warstwie 1)
-
-* **Treść tekstu** – np. nazwa wykonawcy, klienta lub podpis.
-* **Czcionka** – Możliwość wyboru czcionki (np. Poppins, Montserrat).
-* **Rozmiar** – np. `32px`, `48px` itd.
-* **Kolor tekstu** – np. `#FFFFFF` (biały).
-* **Pozycja Y** – Odległość tekstu od górnej krawędzi obrazu (np. `20px`).
-  ![{DAEB4F1D-8EAE-4EF1-B723-0E6E25153A33}](https://github.com/user-attachments/assets/0594945e-c19f-4f38-9920-e3595982ee8e)
-
-
-### 🧱 **Warstwy obrazu**
-
-* **Warstwa 1** – Tekst (nakładka z podpisem)
-* **Warstwa 2** – Cień pod tekstem *(automatyczny)*
-* **Warstwa 3** – **Tło** – przesłany obraz przez użytkownika
-![{D929F093-5077-4890-8DAD-D56C808C6868}](https://github.com/user-attachments/assets/711c59f2-942c-43a2-b850-380679658f5a)
-
-
-
-  author: "euforia.44",
-  version: "5.0.3",
-![{716854BB-4821-4700-943C-FEA3868FF616}](https://github.com/user-attachments/assets/75905071-40ae-4a8c-bf51-ac06d8e66941)
+# [PORTFOLIO MOD]
+```author: euforia.44``
+```wersja: 6.8.0```
+## Zmiany:
+- Naprawiono krytyczny błąd `DiscordAPIError[10008]: Unknown Message`, który występował przy nieprawidłowej konfiguracji komendy. Logika odpowiedzi na interakcję została całkowicie przepisana dla większej stabilności.
+- Ulepszono obsługę błędów dla opcji `watermark`. Jeśli opcja w komendzie slash będzie miała zły typ, bot wyświetli w konsoli precyzyjny komunikat, nie powodując już awarii.
+- Całkowicie usunięto mechanizm sprawdzania autora moda.
+- Usunięto zbędny tekst informacyjny z zakładki 'Obraz' w interfejsie moda.
+- Poprawiono i ujednoznaczniono kolejność rysowania warstw na grafice.
