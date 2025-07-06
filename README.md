@@ -54,10 +54,12 @@ Mod został stworzony i jest rozwijany przez euforia.44.
 
 # [PORTFOLIO MOD]
 author: euforia.44
-wersja: 6.9.0
+wersja: 7.0.0
 
 Zmiany:
 
-- Naprawiono krytyczny błąd `Unknown Message` przy dodawaniu reakcji. Główna wiadomość z grafiką jest teraz zawsze publiczna, co pozwala na stabilne dodawanie reakcji i jest widoczne dla wszystkich użytkowników.
-- Usprawniono logikę odpowiedzi na interakcję. Po wysłaniu publicznej grafiki, tymczasowa, prywatna wiadomość "Bot myśli..." jest automatycznie usuwana, aby zachować czystość na kanale.
-- Zmieniono logikę wysyłania wiadomości na wskazany kanał (`targetChannelID`), aby była bardziej odporna na błędy. Jeśli wysłanie na kanał docelowy się nie uda, bot wyśle grafikę na kanale, gdzie użyto komendy.
+- Naprawiono krytyczny błąd `Unknown Message` poprzez całkowitą przebudowę logiki wysyłania odpowiedzi. Mod teraz zawsze wysyła nową, publiczną wiadomość, a następnie usuwa tymczasową odpowiedź "thinking...", co zapewnia maksymalną stabilność.
+- Zmieniono kolejność rysowania warstw na grafice zgodnie z nowymi wymaganiami (Tło -> Załącznik -> Tekst -> Ramka -> Znak Wodny).
+- Dodano nową funkcję: Cień dla Tekstu. W zakładce "Settings 2" można teraz skonfigurować kolor, rozmycie i pozycję cienia dla głównego napisu.
+- Uproszczono kod odpowiedzialny za wysyłanie wiadomości na kanał docelowy, czyniąc go bardziej odpornym na błędy.
+- Zaktualizowano interfejs moda, aby odzwierciedlał nowe funkcje i zmiany.
