@@ -45,3 +45,6 @@ W panelu **Settings** możesz w pełni dostosować wygląd i działanie komendy 
 
   author: "euforia.44",
   version: "5.0.3",
+
+  ![{420BCCB1-E02A-408C-85B7-718C0FB80252}](https://github.com/user-attachments/assets/beacaa8e-8afa-4a24-b8ea-406dd361ede8)
+
