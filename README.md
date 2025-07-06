@@ -54,11 +54,8 @@ Mod został stworzony i jest rozwijany przez euforia.44.
 
 # [PORTFOLIO MOD]
 author: euforia.44
-wersja: 7.2.0
+wersja: 7.4.0
 
 Zmiany:
 
-- Naprawiono błąd sieciowy `ConnectTimeoutError` poprzez wydłużenie czasu oczekiwania na pobranie obrazka do 30 sekund.
-- Zaimplementowano ulepszone, bardziej szczegółowe logowanie błędów sieciowych w konsoli, co ułatwia diagnozowanie problemów.
-- Dodano bardziej informacyjne komunikaty o błędach dla użytkownika w przypadku problemów z pobieraniem obrazów.
-- Kod został uproszczony i zoptymalizowany dla większej stabilności.
+- Upewniono się, że wszystkie wartości domyślne i funkcjonalności z poprzednich wersji są zachowane.
