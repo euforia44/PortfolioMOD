@@ -5,7 +5,7 @@ module.exports = {
   *                                     -------------------                                        *
   *                                                                                                *
   *                          Całość kodu została stworzona przez: euforia.44                         *
-  *                                         Wersja: 7.7.0                                          *
+  *                                         Wersja: 8.0.0                                          *
   *                                                                                                *
   *    Mod i jego kod źródłowy są własnością intelektualną autora. Zabrania się redystrybucji,      *
   *                      modyfikacji lub sprzedaży bez wyraźnej zgody.                             *
@@ -13,25 +13,26 @@ module.exports = {
   *************************************************************************************************/
 
   name: "Portfolio Mod",
-  displayName: "Portfolio Mod",
+  displayName: "Portfolio Mod v8",
   section: "Canvas",
-  author: "euforia.44",
-  version: "7.7.0",
+  author: "euforia.44 (poprawki i feat. by AI)",
+  version: "8.0.0",
   short_description: "Zaawansowany generator grafik portfolio z licznymi opcjami personalizacji.",
 
   subtitle(data) {
-    return "Generuje profesjonalną grafikę portfolio.";
+    return "Generuje profesjonalną grafikę portfolio z przyciskami.";
   },
 
   fields: [
-    "requiredRoleID", "embedTitle", "embedDesc", "embedColor",
-    "realizatorField", "dlaKogoField", "secondMessageImageURL", "targetChannelID",
+    "requiredRoleID", "targetChannelID", "embedTitle", "embedDesc", "embedColor",
+    "realizatorField", "dlaKogoField", "secondMessageImageURL",
     "fontPath", "fontSize", "fontColor", "textVerticalAlign",
-    "reaction1", "reaction2", "reaction3", "reaction4",
     "textShadowColor", "textShadowBlur", "textShadowOffsetX", "textShadowOffsetY",
     "topLayerImageURL", "mainImageScale", "cornerRadius",
     "shadowColor", "shadowBlur", "shadowOffsetX", "shadowOffsetY", "backgroundImageURL",
-    "watermarkTransparency"
+    "watermarkTransparency",
+    "reaction1", "reaction2", "reaction3", "reaction4",
+    "enableLinkButton", "buttonLabel", "buttonLinkURL", "buttonPosition"
   ],
 
   html(isEvent, data) {
@@ -62,9 +63,9 @@ module.exports = {
             </div>
           </tab>
 
-          <tab label="Styl" icon="font">
+          <tab label="Styl Tekstu" icon="font">
             <div style="padding: 10px;">
-              <p style="font-size: 13px; margin-bottom: 15px;">Główny tekst jest pobierany z opcji komendy slash o nazwie <b>Portfolio</b>.</p>
+              <p style="font-size: 13px; margin-bottom: 15px;">Główny tekst jest pobierany z opcji komendy slash o nazwie <b>tekst_grafiki</b>.</p>
               <div style="display: flex; gap: 10px; margin-bottom: 12px;">
                 <div style="flex-grow: 1;"><label>Czcionka</label><input id="fontPath" class="round" type="text" value="fonts/proxima.otf"></div>
                 <div style="width: 90px;"><label>Maks. Rozmiar</label><input id="fontSize" class="round" type="number" value="180"></div>
@@ -93,7 +94,7 @@ module.exports = {
             </div>
           </tab>
 
-          <tab label="Wygląd" icon="image">
+          <tab label="Wygląd Grafiki" icon="image">
             <div style="padding: 10px;">
               <div style="margin-bottom: 15px;"><label><b>Warstwa Ramki</b></label><input id="topLayerImageURL" class="round" type="text" value="https://cdn.discordapp.com/attachments/1384134507980132412/1391433502746087514/fale.png?ex=686be0ee&is=686a8f6e&hm=4a28d7a91bb2ce6816364459287e664c0ffe35186ee5a71b17aea1a617d708e2&"></div>
               <div style="margin-bottom: 15px;">
@@ -114,14 +115,44 @@ module.exports = {
             </div>
           </tab>
 
-          <tab label="Reakcje" icon="smile outline">
+          <tab label="Interakcje" icon="hand pointer outline">
             <div style="padding: 10px;">
-              <p style="font-size: 13px; margin-bottom: 15px;">Wpisz do czterech emoji, którymi bot ma zareagować na wiadomość. Puste pola zostaną zignorowane.</p>
-              <div style="display: flex; gap: 10px;">
-                <div style="width: 25%;"><label>Reakcja #1</label><input id="reaction1" class="round" type="text" value="🔥"></div>
-                <div style="width: 25%;"><label>Reakcja #2</label><input id="reaction2" class="round" type="text"></div>
-                <div style="width: 25%;"><label>Reakcja #3</label><input id="reaction3" class="round" type="text"></div>
-                <div style="width: 25%;"><label>Reakcja #4</label><input id="reaction4" class="round" type="text"></div>
+              <div style="margin-bottom: 20px;">
+                <p style="font-size: 13px; margin-bottom: 10px;">Wpisz do czterech emoji, którymi bot ma zareagować na wiadomość. Puste pola zostaną zignorowane.</p>
+                <div style="display: flex; gap: 10px;">
+                  <div style="width: 25%;"><label>Reakcja #1</label><input id="reaction1" class="round" type="text" value="🔥"></div>
+                  <div style="width: 25%;"><label>Reakcja #2</label><input id="reaction2" class="round" type="text"></div>
+                  <div style="width: 25%;"><label>Reakcja #3</label><input id="reaction3" class="round" type="text"></div>
+                  <div style="width: 25%;"><label>Reakcja #4</label><input id="reaction4" class="round" type="text"></div>
+                </div>
+              </div>
+              <hr>
+              <div style="margin-top: 20px;">
+                 <p style="font-size: 13px; margin-bottom: 10px;">Dodaj przycisk z linkiem do wiadomości.</p>
+                 <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+                    <div style="width: 50%;">
+                      <label>Włącz Przycisk</label>
+                      <select id="enableLinkButton" class="round">
+                          <option value="false" selected>Nie</option>
+                          <option value="true">Tak</option>
+                      </select>
+                    </div>
+                    <div style="width: 50%;">
+                      <label>Pozycja Przycisku</label>
+                      <select id="buttonPosition" class="round">
+                          <option value="below" selected>Pod Embedem</option>
+                          <option value="above">Nad Embedem</option>
+                      </select>
+                    </div>
+                 </div>
+                 <div style="margin-bottom: 12px;">
+                    <label>Etykieta Przycisku</label>
+                    <input id="buttonLabel" class="round" type="text" value="Zobacz więcej">
+                 </div>
+                 <div>
+                    <label>URL Linku Przycisku</label>
+                    <input id="buttonLinkURL" class="round" type="text" value="https://cracko.lol">
+                 </div>
               </div>
             </div>
           </tab>
@@ -131,7 +162,7 @@ module.exports = {
   },
 
   async action(cache) {
-    const { AttachmentBuilder, EmbedBuilder, MessageFlags } = require("discord.js");
+    const { AttachmentBuilder, EmbedBuilder, MessageFlags, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
     const Canvas = require("canvas");
     const sharp = require('sharp');
     const path = require("path");
@@ -142,10 +173,8 @@ module.exports = {
     const MOD_NAME = "[Portfolio Mod]";
 
     const defaults = {
-        mainImageScale: 60, cornerRadius: 50,
-        shadowColor: "#000000", shadowBlur: 15, shadowOffsetX: 0, shadowOffsetY: 10,
-        fontPath: "fonts/proxima.otf", fontSize: 180, fontColor: "#FFFFFF",
-        textVerticalAlign: "top", watermarkTransparency: 35,
+        mainImageScale: 60, cornerRadius: 50, shadowColor: "#000000", shadowBlur: 15, shadowOffsetX: 0, shadowOffsetY: 10,
+        fontPath: "fonts/proxima.otf", fontSize: 180, fontColor: "#FFFFFF", textVerticalAlign: "top", watermarkTransparency: 35,
         textShadowColor: "#000000", textShadowBlur: 0, textShadowOffsetX: 0, textShadowOffsetY: 0,
     };
     
@@ -171,9 +200,7 @@ module.exports = {
             const response = await fetch(url, { signal: controller.signal });
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return response.arrayBuffer();
-        } finally {
-            clearTimeout(timeoutId);
-        }
+        } finally { clearTimeout(timeoutId); }
     };
 
     if (interaction && typeof interaction.deferReply === 'function' && !interaction.deferred) {
@@ -198,7 +225,7 @@ module.exports = {
         try {
           const background = await Canvas.loadImage(backgroundImageURL);
           ctx.drawImage(background, 0, 0, canvasWidth, canvasHeight);
-        } catch (error) { throw new Error(`Nie udało się załadować obrazu tła z URL: ${backgroundImageURL}. Błąd: ${error.message}`); }
+        } catch (error) { throw new Error(`Nie udało się załadować obrazu tła. Błąd: ${error.message}`); }
       }
 
       const imageAttachment = interaction.options.getAttachment('zalacznik');
@@ -219,10 +246,7 @@ module.exports = {
           mainImageY = y; mainImageHeight = destHeight;
           ctx.save();
           ctx.beginPath();
-          ctx.moveTo(x + radius, y); ctx.lineTo(x + destWidth - radius, y); ctx.arcTo(x + destWidth, y, x + destWidth, y + radius, radius);
-          ctx.lineTo(x + destWidth, y + destHeight - radius); ctx.arcTo(x + destWidth, y + destHeight, x + destWidth - radius, y + destHeight, radius);
-          ctx.lineTo(x + radius, y + destHeight); ctx.arcTo(x, y + destHeight, x, y + destHeight - radius, radius);
-          ctx.lineTo(x, y + radius); ctx.arcTo(x, y, x + radius, y, radius); ctx.closePath();
+          ctx.moveTo(x + radius, y); ctx.lineTo(x + destWidth - radius, y); ctx.arcTo(x + destWidth, y, x + destWidth, y + radius, radius); ctx.lineTo(x + destWidth, y + destHeight - radius); ctx.arcTo(x + destWidth, y + destHeight, x + destWidth - radius, y + destHeight, radius); ctx.lineTo(x + radius, y + destHeight); ctx.arcTo(x, y + destHeight, x, y + destHeight - radius, radius); ctx.lineTo(x, y + radius); ctx.arcTo(x, y, x + radius, y, radius); ctx.closePath();
           const shadowBlur = parseIntWithDefault(getVal("shadowBlur"), defaults.shadowBlur);
           if (shadowBlur > 0) {
             ctx.shadowColor = getVal("shadowColor") || defaults.shadowColor; ctx.shadowBlur = shadowBlur;
@@ -230,7 +254,7 @@ module.exports = {
             ctx.fillStyle = "rgba(0,0,0,0.01)"; ctx.fill();
           }
           ctx.clip(); ctx.drawImage(mainImage, x, y, destWidth, destHeight); ctx.restore();
-        } catch (error) { throw new Error(`Nie udało się załadować załącznika. Upewnij się, że link jest poprawny i publicznie dostępny. Błąd: ${error.message}`); }
+        } catch (error) { throw new Error(`Nie udało się załadować załącznika. Błąd: ${error.message}`); }
       }
       
       const unsafeFontPath = getVal("fontPath") || defaults.fontPath;
@@ -244,7 +268,8 @@ module.exports = {
             const FONT_FAMILY = "CustomFont";
             Canvas.registerFont(safeFontPath, { family: FONT_FAMILY });
 
-            const mainText = this.evalMessage("\${slashParams('Portfolio')}", cache);
+            // !!! WAŻNA ZMIANA - NAPRAWIONY BŁĄD PARAMETRU !!!
+            const mainText = this.evalMessage("\${slashParams('tekst_grafiki')}", cache);
             if (mainText) {
                 ctx.save();
                 const textShadowBlur = parseIntWithDefault(getVal("textShadowBlur"), defaults.textShadowBlur);
@@ -268,12 +293,12 @@ module.exports = {
               try {
                 const topImage = await Canvas.loadImage(topLayerImageURL);
                 ctx.drawImage(topImage, 0, 0, canvasWidth, canvasHeight);
-              } catch (error) { throw new Error(`Nie udało się załadować obrazu ramki z URL: ${topLayerImageURL}. Błąd: ${error.message}`); }
+              } catch (error) { throw new Error(`Nie udało się załadować obrazu ramki. Błąd: ${error.message}`); }
             }
 
             let watermarkText;
             try { watermarkText = interaction.options.getString('watermark'); } 
-            catch (error) { if (error.code === 'CommandInteractionOptionType') console.error(`${MOD_NAME} Błąd konfiguracji: Typ opcji 'watermark' musi być 'String' (Tekst).`); }
+            catch (error) { /* Ignoruj błąd jeśli opcja nie istnieje */ }
       
             if (watermarkText) {
                 const transparencyValue = parseIntWithDefault(getVal("watermarkTransparency"), defaults.watermarkTransparency);
@@ -284,7 +309,7 @@ module.exports = {
                 ctx.fillText(watermarkText, canvasWidth - 20, canvasHeight - 20);
                 ctx.globalAlpha = 1.0;
             }
-        } catch (error) { throw new Error(`Błąd podczas operacji na tekście lub czcionkach. Upewnij się, że plik czcionki istnieje. Błąd: ${error.message}`); }
+        } catch (error) { throw new Error(`Błąd operacji na tekście lub czcionce. Błąd: ${error.message}`); }
       }
       
       const attachment = new AttachmentBuilder(canvas.toBuffer("image/png"), { name: "portfolio.png" });
@@ -298,16 +323,39 @@ module.exports = {
       
       const targetChannelID = getVal("targetChannelID");
       const finalChannel = targetChannelID ? await guild.channels.fetch(targetChannelID).catch(() => interaction.channel) : interaction.channel;
-      const sentMessage = await finalChannel.send({ embeds: [embed], files: [attachment] });
+
+      // --- NOWA LOGIKA PRZYCISKU ---
+      const messagePayload = { embeds: [embed], files: [attachment], components: [] };
+      const enableButton = getVal("enableLinkButton") === 'true';
+
+      if (enableButton) {
+        const buttonLabel = getVal("buttonLabel") || "Zobacz więcej";
+        const buttonURL = getVal("buttonLinkURL");
+        const buttonPosition = getVal("buttonPosition") || "below";
+
+        if (buttonURL) {
+            const linkButton = new ButtonBuilder()
+                .setLabel(buttonLabel)
+                .setURL(buttonURL)
+                .setStyle(ButtonStyle.Link);
+            const row = new ActionRowBuilder().addComponents(linkButton);
+
+            if (buttonPosition === 'above') {
+                await finalChannel.send({ components: [row] });
+            } else {
+                messagePayload.components.push(row);
+            }
+        }
+      }
+
+      const sentMessage = await finalChannel.send(messagePayload);
       
       await interaction.editReply({ content: 'Grafika została pomyślnie wysłana.', embeds: [], files: [] });
       
       if (sentMessage) {
         const reactions = [getVal("reaction1"), getVal("reaction2"), getVal("reaction3"), getVal("reaction4")];
         for (const emoji of reactions) {
-            if (emoji) {
-                await sentMessage.react(emoji).catch(e => console.error(`${MOD_NAME} Nie udało się dodać reakcji "${emoji}":`, e));
-            }
+            if (emoji) { await sentMessage.react(emoji).catch(e => console.error(`${MOD_NAME} Nie udało się dodać reakcji "${emoji}":`, e)); }
         }
         
         const secondImageURL = getVal("secondMessageImageURL");
@@ -318,7 +366,7 @@ module.exports = {
       console.error(`${MOD_NAME} Wystąpił krytyczny błąd:`, error);
       let errorMessage = "Wystąpił nieoczekiwany błąd. Sprawdź konsolę bota.";
       if (error.message.includes('Timeout') || error.code === 'UND_ERR_CONNECT_TIMEOUT') {
-          errorMessage = `Błąd sieciowy: Nie udało się pobrać jednego z obrazów (np. z załącznika). Sprawdź swoje połączenie internetowe lub spróbuj ponownie później.`;
+          errorMessage = `Błąd sieciowy: Nie udało się pobrać jednego z obrazów. Sprawdź swoje połączenie.`;
       }
       await interaction.editReply({ content: errorMessage, embeds: [], files: [] }).catch(() => {});
     } finally {
