@@ -2,11 +2,13 @@ module.exports = {
   /*************************************************************************************************
   *                                                                                                *
   *                                        PORTFOLIO MOD                                           *
-  *                                       Autor: euforia.44                                        *
-  *                                         Wersja: 7.2.0                                          *
+  *                                     -------------------                                        *
   *                                                                                                *
-  *   Ten mod i jego kod źródłowy są własnością intelektualną autora.                               *
-  *   Zabrania się redystrybucji, modyfikacji lub sprzedaży bez wyraźnej zgody autora.              *
+  *                          Całość kodu została stworzona przez: euforia.44                         *
+  *                                         Wersja: 7.4.0                                          *
+  *                                                                                                *
+  *    Mod i jego kod źródłowy są własnością intelektualną autora. Zabrania się redystrybucji,      *
+  *                      modyfikacji lub sprzedaży bez wyraźnej zgody.                             *
   *                                                                                                *
   *************************************************************************************************/
 
@@ -14,7 +16,7 @@ module.exports = {
   displayName: "Portfolio Mod",
   section: "Canvas",
   author: "euforia.44",
-  version: "7.2.0",
+  version: "7.4.0",
   short_description: "Zaawansowany generator grafik portfolio z licznymi opcjami personalizacji.",
 
   subtitle(data) {
@@ -24,7 +26,7 @@ module.exports = {
   fields: [
     "requiredRoleID", "embedTitle", "embedDesc", "embedColor",
     "realizatorField", "dlaKogoField", "secondMessageImageURL", "targetChannelID",
-    "mainText", "fontPath", "fontSize", "fontColor", "textVerticalAlign", "reactionEmoji",
+    "fontPath", "fontSize", "fontColor", "textVerticalAlign", "reactionEmoji",
     "textShadowColor", "textShadowBlur", "textShadowOffsetX", "textShadowOffsetY",
     "topLayerImageURL", "mainImageScale", "cornerRadius",
     "shadowColor", "shadowBlur", "shadowOffsetX", "shadowOffsetY", "backgroundImageURL",
@@ -61,8 +63,7 @@ module.exports = {
 
           <tab label="Settings 2" icon="font">
             <div style="padding: 10px;">
-              <label>Tekst na Obrazie</label>
-              <input id="mainText" class="round" type="text" value="GRAFIKA" style="margin-bottom: 8px;">
+              <p style="font-size: 13px; margin-bottom: 15px;">Główny tekst jest pobierany z opcji komendy slash o nazwie <b>Portfolio</b>.</p>
               <div style="display: flex; gap: 10px; margin-bottom: 12px;">
                 <div style="flex-grow: 1;"><label>Czcionka</label><input id="fontPath" class="round" type="text" value="fonts/proxima.otf"></div>
                 <div style="width: 90px;"><label>Maks. Rozmiar</label><input id="fontSize" class="round" type="number" value="180"></div>
@@ -90,14 +91,14 @@ module.exports = {
               </div>
               <div>
                   <label>URL Obrazu w drugiej wiadomości</label>
-                  <input id="secondMessageImageURL" class="round" type="text" placeholder="Domyślnie puste">
+                  <input id="secondMessageImageURL" class="round" type="text" value="https://cdn.discordapp.com/attachments/1384134507980132412/1384134537495445554/evbanner.png?ex=686b087d&is=6869b6fd&hm=d8be9ecac60ff1daa1bd5e79a0986963a2afa4f7a9406c98f07e76e685cf8746&">
               </div>
             </div>
           </tab>
 
           <tab label="Obraz" icon="image">
             <div style="padding: 10px;">
-              <div style="margin-bottom: 15px;"><label><b>Warstwa Ramki</b></label><input id="topLayerImageURL" class="round" type="text" placeholder="Domyślnie puste"></div>
+              <div style="margin-bottom: 15px;"><label><b>Warstwa Ramki</b></label><input id="topLayerImageURL" class="round" type="text" value="https://cdn.discordapp.com/attachments/1384134507980132412/1391433502746087514/fale.png?ex=686be0ee&is=686a8f6e&hm=4a28d7a91bb2ce6816364459287e664c0ffe35186ee5a71b17aea1a617d708e2&"></div>
               <div style="margin-bottom: 15px;">
                 <div style="display: flex; gap: 10px; margin-top: 8px;">
                   <div style="width: 50%;"><label>Skala Grafiki (%)</label><input id="mainImageScale" class="round" type="number" value="60"></div>
@@ -183,7 +184,6 @@ module.exports = {
       const canvas = Canvas.createCanvas(canvasWidth, canvasHeight);
       const ctx = canvas.getContext("2d");
 
-      // Warstwa Tła
       const backgroundImageURL = getVal("backgroundImageURL");
       if (backgroundImageURL) {
         try {
@@ -192,7 +192,6 @@ module.exports = {
         } catch (error) { throw new Error(`Nie udało się załadować obrazu tła z URL: ${backgroundImageURL}. Błąd: ${error.message}`); }
       }
 
-      // Warstwa Załącznika
       const imageAttachment = interaction.options.getAttachment('zalacznik');
       let mainImageY = canvasHeight / 2, mainImageHeight = 0;
 
@@ -236,8 +235,7 @@ module.exports = {
             const FONT_FAMILY = "CustomFont";
             Canvas.registerFont(safeFontPath, { family: FONT_FAMILY });
 
-            // Warstwa Tekstu
-            const mainText = getVal("mainText");
+            const mainText = this.evalMessage("\${slashParams('Portfolio')}", cache);
             if (mainText) {
                 ctx.save();
                 const textShadowBlur = parseIntWithDefault(getVal("textShadowBlur"), defaults.textShadowBlur);
@@ -256,7 +254,6 @@ module.exports = {
                 ctx.restore();
             }
             
-            // Warstwa Ramki
             const topLayerImageURL = getVal("topLayerImageURL");
             if (topLayerImageURL) {
               try {
@@ -265,7 +262,6 @@ module.exports = {
               } catch (error) { throw new Error(`Nie udało się załadować obrazu ramki z URL: ${topLayerImageURL}. Błąd: ${error.message}`); }
             }
 
-            // Warstwa Znaku Wodnego
             let watermarkText;
             try { watermarkText = interaction.options.getString('watermark'); } 
             catch (error) { if (error.code === 'CommandInteractionOptionType') console.error(`${MOD_NAME} Błąd konfiguracji: Typ opcji 'watermark' musi być 'String' (Tekst).`); }
@@ -286,7 +282,7 @@ module.exports = {
       const { guild } = interaction;
       const embed = new EmbedBuilder()
           .setColor(getVal("embedColor") || '#ea29d1').setImage("attachment://portfolio.png").setTitle(getVal("embedTitle") || null).setDescription(getVal("embedDesc") || null)
-          .setThumbnail(guild.iconURL({ extension: "png", size: 128 })).setFooter({ text: `${guild.name} • ${new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' })}`, iconURL: guild.iconURL() });
+          .setThumbnail(guild.iconURL({ extension: "png", size: 128 })).setFooter({ text: `${guild.name} • ${new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' })} - by euforia.44`, iconURL: guild.iconURL() });
       if (getVal("realizatorField") || getVal("dlaKogoField")) {
         embed.addFields({ name: "Wykonane przez:", value: getVal("realizatorField") || " ", inline: true }, { name: "Dla kogo:", value: getVal("dlaKogoField") || " ", inline: true });
       }
