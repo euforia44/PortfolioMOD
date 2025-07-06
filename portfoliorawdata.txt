@@ -1,8 +1,8 @@
 {
-  "name": "portfolio-grafika",
+  "name": "portfolio",
   "temp": "member",
   "event-type": "6",
-  "_id": "hUbuq",
+  "_id": "kQJvc",
   "actions": [
     {
       "comment": "mod by euforia.44 ",
@@ -23,28 +23,25 @@
       "name": "Comment"
     },
     {
-      "comment": "Przeczytaj tutorial!",
-      "color": "#ffffff",
-      "bold": "true",
-      "italic": "false",
-      "underline": "true",
-      "strikethrough": "false",
-      "name": "Comment"
-    },
-    {
-      "requiredRoleID": "1357371288242622616",
+      "requiredRoleID": "",
       "embedTitle": "PORTFOLIO",
       "embedDesc": "Nowa praca już wleciała! Podoba się? Zostaw reakcję!",
-      "embedColor": "",
-      "realizatorField": "${slashParams(\"Wykonawca\")}",
-      "dlaKogoField": "${slashParams(\"dlakogo\")}",
-      "secondMessageImageURL": "https://cdn.discordapp.com/attachments/1384134507980132412/1384134863233351763/evbannero.png?ex=686b08cb&is=6869b74b&hm=9459b6761bfcc2e807fa0a8d1dadd34990d8a23fbff3ad9716cde3c2a9e2ec4d&",
+      "embedColor": "#ea29d1",
+      "realizatorField": "${slashParams('Wykonawca')}",
+      "dlaKogoField": "${slashParams('dlakogo')}",
+      "secondMessageImageURL": "",
+      "targetChannelID": "",
       "mainText": "GRAFIKA",
-      "fontPath": "fonts\\proxima.otf",
+      "fontPath": "fonts/proxima.otf",
       "fontSize": "180",
       "fontColor": "#FFFFFF",
-      "textYPosition": "160",
-      "topLayerImageURL": "https://cdn.discordapp.com/attachments/1384134507980132412/1391392211874091098/lo2oo.png?ex=686bba7a&is=686a68fa&hm=a0a5dfe1ef81a0668a7f74af2a49d96d478dd922e178e51cc2ad496077aeff37&",
+      "textVerticalAlign": "top",
+      "reactionEmoji": "🔥",
+      "textShadowColor": "#000000",
+      "textShadowBlur": "5",
+      "textShadowOffsetX": "2",
+      "textShadowOffsetY": "2",
+      "topLayerImageURL": "",
       "mainImageScale": "60",
       "cornerRadius": "50",
       "shadowColor": "#000000",
@@ -52,6 +49,7 @@
       "shadowOffsetX": "0",
       "shadowOffsetY": "10",
       "backgroundImageURL": "https://cdn.discordapp.com/attachments/1384134507980132412/1391228184007282820/tloportfolio.png?ex=686b21b6&is=6869d036&hm=62d9d0ca73b3bd1428f65ac1f425de097c36c73dcdafc7e118ce9c48347c69fb&",
+      "watermarkTransparency": "35",
       "name": "Portfolio Mod"
     }
   ],
@@ -60,24 +58,32 @@
   "parameters": [
     {
       "name": "Wykonawca",
-      "description": "osoba która stworzyła  tą rzecz do portfolio!",
+      "description": "Osoba, która wykonała pracę.",
       "type": "USER",
       "required": true,
       "choices": null
     },
     {
       "name": "dlakogo",
-      "description": "dla kogo zostało to stworzone?",
+      "description": "Osoba, dla której została wykonana praca.",
       "type": "USER",
       "required": true,
       "choices": null
     },
     {
+      "name": "watermark",
+      "description": "Niewielki tekst, który pojawi się na grafice jako znak wodny",
+      "type": "STRING",
+      "required": false,
+      "choices": null
+    },
+    {
       "name": "zalacznik",
-      "description": "zalacznik grafika/film",
+      "description": "Plik z gotową grafiką (np. .png/.jpg/webp). Musi być załączony do wiadomości.",
       "type": "ATTACHMENT",
       "required": true,
       "choices": null
     }
-  ]
+  ],
+  "description": "Prezentację wykonanej pracy graficznej z podpisem, oznaczeniem wykonawcy i osoby zamawiającej. by euforia.44"
 }
