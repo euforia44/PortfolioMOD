@@ -1,1 +1,329 @@
-function _0x3830(){const _0x2c64c0=['catch','bottom','reactionEmoji','textShadowColor','2aEAGbw','px\x20\x22CustomFont\x22,\x20sans-serif','zalacznik','Generuje\x20profesjonalną\x20grafikę\x20portfolio.','height','textShadowOffsetX','targetChannelID','\x20Wystąpił\x20krytyczny\x20błąd:','max','getContext','createCanvas','\x20Błąd\x20konfiguracji:\x20Typ\x20opcji\x20\x27watermark\x27\x20musi\x20być\x20\x27String\x27\x20(Tekst).','discord.js','react','\x22,\x20sans-serif','351080nAOPUt','arrayBuffer','right','topLayerImageURL','toFormat','image/png','error','Dla\x20kogo:','deferred','#ea29d1','\x20Nie\x20udało\x20się\x20dodać\x20reakcji:','setImage','restore','embedDesc','cornerRadius','shadowOffsetX','embedTitle','editReply','dlaKogoField','Zaawansowany\x20generator\x20grafik\x20portfolio\x20z\x20licznymi\x20opcjami\x20personalizacji.','requiredRoleID','px\x20\x22','name','5557230afKfUT','CommandInteractionOptionType','lineTo','width','Wystąpił\x20nieoczekiwany\x20błąd.\x20Sprawdź\x20konsolę\x20bota.','\x20Błąd\x20ładowania\x20obrazu\x20tła.','mainText','min','backgroundImageURL','Wykonane\x20przez:','euforia.44','evalMessage','Nie\x20masz\x20uprawnień\x20do\x20użycia\x20tej\x20komendy.','from','29198830MdQftk','send','drawImage','url','fillText','5022036dCUtAq','textShadowOffsetY','member','#FFFFFF','650956TEnbLY','textShadowBlur','\x20Błąd\x20rysowania\x20grafiki\x20głównej.','font','path','Portfolio\x20Mod','fontPath','\x0a\x20\x20\x20\x20\x20\x20<div\x20style=\x22padding:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tab-system>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tab\x20label=\x22Settings\x201\x22\x20icon=\x22cogs\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22padding:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x20100%;\x20margin-bottom:\x2012px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>ID\x20Roli\x20z\x20Uprawnieniami\x20(zostaw\x20puste,\x20aby\x20wszyscy\x20mogli\x20używać)</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22requiredRoleID\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20placeholder=\x22Wklej\x20tutaj\x20ID\x20roli...\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x20100%;\x20margin-bottom:\x2012px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>ID\x20Kanału\x20do\x20Wysyłki\x20(zostaw\x20puste,\x20aby\x20wysyłać\x20na\x20obecnym\x20kanale)</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22targetChannelID\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20placeholder=\x22Wklej\x20tutaj\x20ID\x20kanału...\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20gap:\x2010px;\x20margin-bottom:\x2012px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2060%;\x22><label>Tytuł\x20Embedu</label><input\x20id=\x22embedTitle\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20value=\x22PORTFOLIO\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2040%;\x22><label>Kolor\x20Embedu</label><input\x20id=\x22embedColor\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20value=\x22#ea29d1\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin-bottom:\x2012px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Opis\x20Embedu</label><textarea\x20id=\x22embedDesc\x22\x20class=\x22round\x22\x20rows=\x222\x22\x20style=\x22width:\x20100%;\x20resize:\x20vertical;\x22>Nowa\x20praca\x20już\x20wleciała!\x20Podoba\x20się?\x20Zostaw\x20reakcję!</textarea>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20gap:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2050%;\x22><label>Pole\x20\x22Wykonane\x20przez\x22</label><input\x20id=\x22realizatorField\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20value=\x22${slashParams(\x27Wykonawca\x27)}\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2050%;\x22><label>Pole\x20\x22Dla\x20kogo\x22</label><input\x20id=\x22dlaKogoField\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20value=\x22${slashParams(\x27dlakogo\x27)}\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tab>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tab\x20label=\x22Settings\x202\x22\x20icon=\x22font\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22padding:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Tekst\x20na\x20Obrazie</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22mainText\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20value=\x22GRAFIKA\x22\x20style=\x22margin-bottom:\x208px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20gap:\x2010px;\x20margin-bottom:\x2012px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22flex-grow:\x201;\x22><label>Czcionka</label><input\x20id=\x22fontPath\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20value=\x22fonts/proxima.otf\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2090px;\x22><label>Maks.\x20Rozmiar</label><input\x20id=\x22fontSize\x22\x20class=\x22round\x22\x20type=\x22number\x22\x20value=\x22180\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2090px;\x22><label>Kolor</label><input\x20id=\x22fontColor\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20value=\x22#FFFFFF\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin-top:\x208px;\x20margin-bottom:\x2012px;\x22><label><b>Cień\x20dla\x20Tekstu</b></label></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20gap:\x2010px;\x20margin-bottom:\x2012px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2025%;\x22><label>Kolor</label><input\x20id=\x22textShadowColor\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20value=\x22#000000\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2025%;\x22><label>Rozmycie</label><input\x20id=\x22textShadowBlur\x22\x20class=\x22round\x22\x20type=\x22number\x22\x20value=\x225\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2025%;\x22><label>Offset\x20X</label><input\x20id=\x22textShadowOffsetX\x22\x20class=\x22round\x22\x20type=\x22number\x22\x20value=\x222\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2025%;\x22><label>Offset\x20Y</label><input\x20id=\x22textShadowOffsetY\x22\x20class=\x22round\x22\x20type=\x22number\x22\x20value=\x222\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20gap:\x2010px;\x20margin-bottom:\x2012px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2050%;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Wyrównanie\x20Tekstu\x20w\x20Pionie</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22textVerticalAlign\x22\x20class=\x22round\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22top\x22\x20selected>Góra</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22bottom\x22>Dół</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2050%;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Reakcja\x20Bota\x20(Emoji)</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22reactionEmoji\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20value=\x22🔥\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>URL\x20Obrazu\x20w\x20drugiej\x20wiadomości</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22secondMessageImageURL\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20placeholder=\x22Domyślnie\x20puste\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tab>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tab\x20label=\x22Obraz\x22\x20icon=\x22image\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22padding:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin-bottom:\x2015px;\x22><label><b>Warstwa\x20Ramki</b></label><input\x20id=\x22topLayerImageURL\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20placeholder=\x22Domyślnie\x20puste\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin-bottom:\x2015px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20gap:\x2010px;\x20margin-top:\x208px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2050%;\x22><label>Skala\x20Grafiki\x20(%)</label><input\x20id=\x22mainImageScale\x22\x20class=\x22round\x22\x20type=\x22number\x22\x20value=\x2260\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2050%;\x22><label>Zaokrąglenie\x20(px)</label><input\x20id=\x22cornerRadius\x22\x20class=\x22round\x22\x20type=\x22number\x22\x20value=\x2250\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin-top:\x208px;\x22><label><b>Cień\x20dla\x20Grafiki</b></label></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20gap:\x2010px;\x20margin-bottom:\x2012px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2025%;\x22><label>Kolor</label><input\x20id=\x22shadowColor\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20value=\x22#000000\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2025%;\x22><label>Rozmycie</label><input\x20id=\x22shadowBlur\x22\x20class=\x22round\x22\x20type=\x22number\x22\x20value=\x2215\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2025%;\x22><label>Offset\x20X</label><input\x20id=\x22shadowOffsetX\x22\x20class=\x22round\x22\x20type=\x22number\x22\x20value=\x220\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2025%;\x22><label>Offset\x20Y</label><input\x20id=\x22shadowOffsetY\x22\x20class=\x22round\x22\x20type=\x22number\x22\x20value=\x2210\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22width:\x2050%;\x22><label>Przezroczystość\x20Znaku\x20Wodnego\x20(%)</label><input\x20id=\x22watermarkTransparency\x22\x20class=\x22round\x22\x20type=\x22number\x22\x20value=\x2235\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><label><b>Warstwa\x20Tła</b></label><input\x20id=\x22backgroundImageURL\x22\x20class=\x22round\x22\x20type=\x22text\x22\x20value=\x22https://cdn.discordapp.com/attachments/1384134507980132412/1391228184007282820/tloportfolio.png?ex=686b21b6&is=6869d036&hm=62d9d0ca73b3bd1428f65ac1f425de097c36c73dcdafc7e118ce9c48347c69fb&\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tab>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tab-system>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20','#000000','fonts/proxima.otf','toBuffer','loadImage','callNextAction','png','Europe/Warsaw','top','embedColor','4520LvwhXD','\x20Błąd\x20ładowania\x20ramki.','startsWith','getString','setDescription','shadowColor','\x20Błąd\x20podczas\x20operacji\x20na\x20tekście.','realizatorField','registerFont','globalAlpha','setFooter','moveTo','center','resolve','cache','bold','arcTo','mainImageScale','1635960KGtuVt','toLocaleString','\x20•\x20','clip','fontColor','fillStyle','8995HLDjrB','CustomFont','pl-PL','\x20Nie\x20udało\x20się\x20wysłać\x20drugiej\x20wiadomości:','channel','fontSize','iconURL','cwd','deferReply','roles','getAttachment','\x20Niedozwolona\x20ścieżka\x20czcionki:\x20','measureText','setThumbnail','bold\x20','exports','secondMessageImageURL','shadowOffsetY','middle','rgba(0,0,0,0.01)','Grafika\x20została\x20pomyślnie\x20wysłana.','textVerticalAlign','25PjpOZm','\x20Nie\x20udało\x20się\x20odroczyć\x20odpowiedzi:','watermarkTransparency','shadowBlur','options','code','textBaseline'];_0x3830=function(){return _0x2c64c0;};return _0x3830();}const _0x3439af=_0x6bde;function _0x6bde(_0x400cca,_0x385c1e){const _0x3830a0=_0x3830();return _0x6bde=function(_0x6bde84,_0x3d30e1){_0x6bde84=_0x6bde84-0x19e;let _0x1dc100=_0x3830a0[_0x6bde84];return _0x1dc100;},_0x6bde(_0x400cca,_0x385c1e);}(function(_0x48752a,_0x3a35b5){const _0xa4d6fe=_0x6bde,_0x309a3c=_0x48752a();while(!![]){try{const _0x3d05cd=parseInt(_0xa4d6fe(0x1a7))/0x1*(-parseInt(_0xa4d6fe(0x1f1))/0x2)+-parseInt(_0xa4d6fe(0x1ca))/0x3+parseInt(_0xa4d6fe(0x200))/0x4*(-parseInt(_0xa4d6fe(0x1e6))/0x5)+-parseInt(_0xa4d6fe(0x1a3))/0x6+-parseInt(_0xa4d6fe(0x1d0))/0x7*(-parseInt(_0xa4d6fe(0x1b8))/0x8)+-parseInt(_0xa4d6fe(0x217))/0x9+parseInt(_0xa4d6fe(0x19e))/0xa;if(_0x3d05cd===_0x3a35b5)break;else _0x309a3c['push'](_0x309a3c['shift']());}catch(_0x5af03d){_0x309a3c['push'](_0x309a3c['shift']());}}}(_0x3830,0x87d12),module[_0x3439af(0x1df)]={'name':_0x3439af(0x1ac),'displayName':_0x3439af(0x1ac),'section':'Canvas','author':_0x3439af(0x221),'version':'7.1.0','short_description':_0x3439af(0x213),'subtitle'(_0x1557ab){const _0x446f53=_0x3439af;return _0x446f53(0x1f4);},'fields':[_0x3439af(0x214),_0x3439af(0x210),_0x3439af(0x20d),_0x3439af(0x1b7),_0x3439af(0x1bf),'dlaKogoField',_0x3439af(0x1e0),_0x3439af(0x1f7),_0x3439af(0x21d),'fontPath',_0x3439af(0x1d5),_0x3439af(0x1ce),_0x3439af(0x1e5),_0x3439af(0x1ef),_0x3439af(0x1f0),_0x3439af(0x1a8),_0x3439af(0x1f6),'textShadowOffsetY',_0x3439af(0x203),_0x3439af(0x1c9),_0x3439af(0x20e),_0x3439af(0x1bd),_0x3439af(0x1e9),_0x3439af(0x20f),_0x3439af(0x1e1),_0x3439af(0x21f),_0x3439af(0x1e8)],'html'(_0x19279a,_0x1275fd){const _0x406317=_0x3439af;return _0x406317(0x1ae);},async 'action'(_0x4db040){const _0x441eb1=_0x3439af,{AttachmentBuilder:_0x6871c1,EmbedBuilder:_0xdd3371,MessageFlags:_0x45639c}=require(_0x441eb1(0x1fd)),_0x46056a=require('canvas'),_0x301e96=require('sharp'),_0x13e5c6=require(_0x441eb1(0x1ab)),_0x1e12f4=_0x4db040['actions'][_0x4db040['index']],_0x1133fd=_0x5eb03b=>this[_0x441eb1(0x222)](_0x1e12f4[_0x5eb03b],_0x4db040),{interaction:_0x458dd4}=_0x4db040,_0x1d4a20='[Portfolio\x20Mod]',_0x2dc0ef={'embedColor':_0x441eb1(0x209),'mainImageScale':0x3c,'cornerRadius':0x32,'shadowColor':'#000000','shadowBlur':0xf,'shadowOffsetX':0x0,'shadowOffsetY':0xa,'fontPath':_0x441eb1(0x1b0),'fontSize':0xb4,'fontColor':_0x441eb1(0x1a6),'textVerticalAlign':_0x441eb1(0x1b6),'watermarkTransparency':0x23,'textShadowColor':_0x441eb1(0x1af),'textShadowBlur':0x0,'textShadowOffsetX':0x0,'textShadowOffsetY':0x0},_0x1bc8de=(_0x2f27ba,_0x1169f6)=>{const _0x3ffa80=parseInt(_0x2f27ba,0xa);return isNaN(_0x3ffa80)?_0x1169f6:_0x3ffa80;},_0x2e0ac3=(_0x8f5ce7,_0x576a58,_0x34150f,_0x2ae845,_0x14194d)=>{const _0x1e7835=_0x441eb1;let _0x4e1d2b=_0x2ae845;do{_0x8f5ce7[_0x1e7835(0x1aa)]=_0x34150f+'\x20'+_0x4e1d2b+_0x1e7835(0x1f2);if(_0x8f5ce7[_0x1e7835(0x1dc)](_0x576a58)['width']<=_0x14194d)return _0x4e1d2b;_0x4e1d2b-=0x5;}while(_0x4e1d2b>0xa);return _0x4e1d2b;};if(_0x458dd4&&typeof _0x458dd4[_0x441eb1(0x1d8)]==='function'&&!_0x458dd4[_0x441eb1(0x208)])try{await _0x458dd4[_0x441eb1(0x1d8)]({'flags':_0x45639c['Ephemeral']});}catch(_0x50b982){return console[_0x441eb1(0x206)](_0x1d4a20+_0x441eb1(0x1e7),_0x50b982);}const _0x4d67df=_0x1133fd(_0x441eb1(0x214));if(_0x4d67df&&_0x458dd4[_0x441eb1(0x1a5)]&&!_0x458dd4[_0x441eb1(0x1a5)][_0x441eb1(0x1d9)][_0x441eb1(0x1c6)]['has'](_0x4d67df))return await _0x458dd4[_0x441eb1(0x211)]({'content':_0x441eb1(0x223)})[_0x441eb1(0x1ed)](_0x24b842=>console['error'](_0x24b842)),this[_0x441eb1(0x1b3)](_0x4db040);try{const _0x1c2a4b=0x780,_0x47f4c0=0x438,_0x4fe556=_0x46056a[_0x441eb1(0x1fb)](_0x1c2a4b,_0x47f4c0),_0x135c3d=_0x4fe556[_0x441eb1(0x1fa)]('2d'),_0x5ab28e=_0x1133fd(_0x441eb1(0x21f));if(_0x5ab28e)try{const _0x496a69=await _0x46056a[_0x441eb1(0x1b2)](_0x5ab28e);_0x135c3d[_0x441eb1(0x1a0)](_0x496a69,0x0,0x0,_0x1c2a4b,_0x47f4c0);}catch(_0x230a64){console[_0x441eb1(0x206)](_0x1d4a20+_0x441eb1(0x21c),_0x230a64);}const _0x59a021=_0x458dd4[_0x441eb1(0x1ea)][_0x441eb1(0x1da)](_0x441eb1(0x1f3));let _0x3f115b=_0x47f4c0/0x2,_0x16cd65=0x0;if(_0x59a021?.[_0x441eb1(0x1a1)])try{const _0x168542=await(await fetch(_0x59a021[_0x441eb1(0x1a1)]))[_0x441eb1(0x201)](),_0x18f47e=await _0x301e96(Buffer[_0x441eb1(0x224)](_0x168542))[_0x441eb1(0x204)]('png')[_0x441eb1(0x1b1)](),_0x14d2ee=await _0x46056a[_0x441eb1(0x1b2)](_0x18f47e),_0x12a021=_0x1bc8de(_0x1133fd('mainImageScale'),_0x2dc0ef[_0x441eb1(0x1c9)])/0x64,_0x467b63=_0x1bc8de(_0x1133fd(_0x441eb1(0x20e)),_0x2dc0ef[_0x441eb1(0x20e)]),_0x580d24=_0x1c2a4b*Math[_0x441eb1(0x1f9)](0.1,Math[_0x441eb1(0x21e)](0x1,_0x12a021)),_0x3ea107=_0x47f4c0*Math[_0x441eb1(0x1f9)](0.1,Math['min'](0x1,_0x12a021)),_0x49864b=_0x580d24/_0x3ea107,_0x4e9d9d=_0x14d2ee[_0x441eb1(0x21a)]/_0x14d2ee[_0x441eb1(0x1f5)];let _0x4531dc,_0x18d1dd;_0x4e9d9d>_0x49864b?(_0x4531dc=_0x580d24,_0x18d1dd=_0x580d24/_0x4e9d9d):(_0x18d1dd=_0x3ea107,_0x4531dc=_0x3ea107*_0x4e9d9d);const _0xd85a84=(_0x1c2a4b-_0x4531dc)/0x2,_0x4ac9ea=(_0x47f4c0-_0x18d1dd)/0x2;_0x3f115b=_0x4ac9ea,_0x16cd65=_0x18d1dd,_0x135c3d['save'](),_0x135c3d['beginPath'](),_0x135c3d[_0x441eb1(0x1c3)](_0xd85a84+_0x467b63,_0x4ac9ea),_0x135c3d[_0x441eb1(0x219)](_0xd85a84+_0x4531dc-_0x467b63,_0x4ac9ea),_0x135c3d['arcTo'](_0xd85a84+_0x4531dc,_0x4ac9ea,_0xd85a84+_0x4531dc,_0x4ac9ea+_0x467b63,_0x467b63),_0x135c3d[_0x441eb1(0x219)](_0xd85a84+_0x4531dc,_0x4ac9ea+_0x18d1dd-_0x467b63),_0x135c3d[_0x441eb1(0x1c8)](_0xd85a84+_0x4531dc,_0x4ac9ea+_0x18d1dd,_0xd85a84+_0x4531dc-_0x467b63,_0x4ac9ea+_0x18d1dd,_0x467b63),_0x135c3d[_0x441eb1(0x219)](_0xd85a84+_0x467b63,_0x4ac9ea+_0x18d1dd),_0x135c3d[_0x441eb1(0x1c8)](_0xd85a84,_0x4ac9ea+_0x18d1dd,_0xd85a84,_0x4ac9ea+_0x18d1dd-_0x467b63,_0x467b63),_0x135c3d[_0x441eb1(0x219)](_0xd85a84,_0x4ac9ea+_0x467b63),_0x135c3d[_0x441eb1(0x1c8)](_0xd85a84,_0x4ac9ea,_0xd85a84+_0x467b63,_0x4ac9ea,_0x467b63),_0x135c3d['closePath']();const _0x3be05c=_0x1bc8de(_0x1133fd(_0x441eb1(0x1e9)),_0x2dc0ef[_0x441eb1(0x1e9)]);_0x3be05c>0x0&&(_0x135c3d[_0x441eb1(0x1bd)]=_0x1133fd(_0x441eb1(0x1bd))||_0x2dc0ef[_0x441eb1(0x1bd)],_0x135c3d[_0x441eb1(0x1e9)]=_0x3be05c,_0x135c3d[_0x441eb1(0x20f)]=_0x1bc8de(_0x1133fd(_0x441eb1(0x20f)),_0x2dc0ef[_0x441eb1(0x20f)]),_0x135c3d[_0x441eb1(0x1e1)]=_0x1bc8de(_0x1133fd('shadowOffsetY'),_0x2dc0ef[_0x441eb1(0x1e1)]),_0x135c3d[_0x441eb1(0x1cf)]=_0x441eb1(0x1e3),_0x135c3d['fill']()),_0x135c3d[_0x441eb1(0x1cd)](),_0x135c3d[_0x441eb1(0x1a0)](_0x14d2ee,_0xd85a84,_0x4ac9ea,_0x4531dc,_0x18d1dd),_0x135c3d['restore']();}catch(_0x463853){console[_0x441eb1(0x206)](_0x1d4a20+_0x441eb1(0x1a9),_0x463853);}const _0x3bde53=_0x1133fd(_0x441eb1(0x1ad))||_0x2dc0ef[_0x441eb1(0x1ad)],_0x5e5469=process[_0x441eb1(0x1d7)](),_0x5a962a=_0x13e5c6[_0x441eb1(0x1c5)](_0x5e5469,_0x3bde53);if(!_0x5a962a[_0x441eb1(0x1ba)](_0x5e5469))console[_0x441eb1(0x206)](_0x1d4a20+_0x441eb1(0x1db)+_0x3bde53);else try{const _0x2be472=_0x441eb1(0x1d1);_0x46056a[_0x441eb1(0x1c0)](_0x5a962a,{'family':_0x2be472});const _0x4bb001=_0x1133fd('mainText');if(_0x4bb001){_0x135c3d['save']();const _0x56f4f7=_0x1bc8de(_0x1133fd(_0x441eb1(0x1a8)),_0x2dc0ef[_0x441eb1(0x1a8)]);_0x56f4f7>0x0&&(_0x135c3d[_0x441eb1(0x1bd)]=_0x1133fd(_0x441eb1(0x1f0))||_0x2dc0ef[_0x441eb1(0x1f0)],_0x135c3d[_0x441eb1(0x1e9)]=_0x56f4f7,_0x135c3d[_0x441eb1(0x20f)]=_0x1bc8de(_0x1133fd('textShadowOffsetX'),_0x2dc0ef[_0x441eb1(0x1f6)]),_0x135c3d[_0x441eb1(0x1e1)]=_0x1bc8de(_0x1133fd(_0x441eb1(0x1a4)),_0x2dc0ef[_0x441eb1(0x1a4)]));const _0xabedeb=_0x1bc8de(_0x1133fd('fontSize'),_0x2dc0ef[_0x441eb1(0x1d5)]),_0x153bec=_0x2e0ac3(_0x135c3d,_0x4bb001,'bold',_0xabedeb,_0x1c2a4b*0.9);_0x135c3d[_0x441eb1(0x1aa)]=_0x441eb1(0x1de)+_0x153bec+'px\x20\x22'+_0x2be472+_0x441eb1(0x1ff),_0x135c3d['fillStyle']=_0x1133fd(_0x441eb1(0x1ce))||_0x2dc0ef['fontColor'],_0x135c3d['textAlign']=_0x441eb1(0x1c4),_0x135c3d[_0x441eb1(0x1ec)]=_0x441eb1(0x1e2);const _0x218127=_0x1133fd(_0x441eb1(0x1e5))||_0x2dc0ef[_0x441eb1(0x1e5)],_0x270ba1=_0x218127==='bottom'?_0x3f115b+_0x16cd65+(_0x47f4c0-(_0x3f115b+_0x16cd65))/0x2:_0x3f115b/0x2;_0x135c3d[_0x441eb1(0x1a2)](_0x4bb001,_0x1c2a4b/0x2,_0x270ba1),_0x135c3d[_0x441eb1(0x20c)]();}const _0x288f62=_0x1133fd(_0x441eb1(0x203));if(_0x288f62)try{const _0x191353=await _0x46056a[_0x441eb1(0x1b2)](_0x288f62);_0x135c3d[_0x441eb1(0x1a0)](_0x191353,0x0,0x0,_0x1c2a4b,_0x47f4c0);}catch(_0x37e9ff){console[_0x441eb1(0x206)](_0x1d4a20+_0x441eb1(0x1b9),_0x37e9ff);}let _0x40ec77;try{_0x40ec77=_0x458dd4[_0x441eb1(0x1ea)][_0x441eb1(0x1bb)]('watermark');}catch(_0x5e0187){if(_0x5e0187[_0x441eb1(0x1eb)]===_0x441eb1(0x218))console[_0x441eb1(0x206)](_0x1d4a20+_0x441eb1(0x1fc));}if(_0x40ec77){const _0x1d9fbd=_0x1bc8de(_0x1133fd(_0x441eb1(0x1e8)),_0x2dc0ef['watermarkTransparency']);_0x135c3d[_0x441eb1(0x1c1)]=Math[_0x441eb1(0x1f9)](0x0,Math[_0x441eb1(0x21e)](0x64,_0x1d9fbd))/0x64;const _0x509c96=_0x2e0ac3(_0x135c3d,_0x40ec77,_0x441eb1(0x1c7),0x1e,_0x1c2a4b*0.4);_0x135c3d[_0x441eb1(0x1aa)]=_0x441eb1(0x1de)+_0x509c96+_0x441eb1(0x215)+_0x2be472+_0x441eb1(0x1ff),_0x135c3d['fillStyle']=_0x441eb1(0x1a6),_0x135c3d['textAlign']=_0x441eb1(0x202),_0x135c3d['textBaseline']=_0x441eb1(0x1ee),_0x135c3d[_0x441eb1(0x1a2)](_0x40ec77,_0x1c2a4b-0x14,_0x47f4c0-0x14),_0x135c3d[_0x441eb1(0x1c1)]=0x1;}}catch(_0x4f32b8){console[_0x441eb1(0x206)](_0x1d4a20+_0x441eb1(0x1be),_0x4f32b8);}const _0x322717=new _0x6871c1(_0x4fe556[_0x441eb1(0x1b1)](_0x441eb1(0x205)),{'name':'portfolio.png'}),{guild:_0x35d120}=_0x458dd4,_0x5cb135=_0x35d120[_0x441eb1(0x1d6)]({'extension':_0x441eb1(0x1b4),'size':0x80}),_0x8b2be9=new Date()[_0x441eb1(0x1cb)](_0x441eb1(0x1d2),{'timeZone':_0x441eb1(0x1b5)}),_0x54e0b9=_0x1133fd(_0x441eb1(0x1b7)),_0x562f2d=new _0xdd3371()['setColor'](typeof _0x54e0b9==='string'&&_0x54e0b9[_0x441eb1(0x1ba)]('#')?_0x54e0b9:_0x2dc0ef[_0x441eb1(0x1b7)])[_0x441eb1(0x20b)]('attachment://portfolio.png')['setTitle'](_0x1133fd(_0x441eb1(0x210))||null)[_0x441eb1(0x1bc)](_0x1133fd(_0x441eb1(0x20d))||null)[_0x441eb1(0x1dd)](_0x5cb135)[_0x441eb1(0x1c2)]({'text':_0x35d120[_0x441eb1(0x216)]+_0x441eb1(0x1cc)+_0x8b2be9,'iconURL':_0x5cb135}),_0x46dac1=_0x1133fd(_0x441eb1(0x1bf)),_0x49b1a8=_0x1133fd(_0x441eb1(0x212));(_0x46dac1||_0x49b1a8)&&_0x562f2d['addFields']({'name':_0x441eb1(0x220),'value':_0x46dac1||'\x20','inline':!![]},{'name':_0x441eb1(0x207),'value':_0x49b1a8||'\x20','inline':!![]});const _0x201c29={'embeds':[_0x562f2d],'files':[_0x322717]},_0x1102f0=_0x1133fd(_0x441eb1(0x1f7)),_0x4c729c=_0x1102f0?await _0x35d120['channels']['fetch'](_0x1102f0)[_0x441eb1(0x1ed)](()=>_0x458dd4[_0x441eb1(0x1d4)]):_0x458dd4[_0x441eb1(0x1d4)],_0x422f9d=await _0x4c729c[_0x441eb1(0x19f)](_0x201c29);await _0x458dd4[_0x441eb1(0x211)]({'content':_0x441eb1(0x1e4),'embeds':[],'files':[]});if(_0x422f9d){const _0x255797=_0x1133fd('reactionEmoji');if(_0x255797)_0x422f9d[_0x441eb1(0x1fe)](_0x255797)[_0x441eb1(0x1ed)](_0xdfaac1=>console['error'](_0x1d4a20+_0x441eb1(0x20a),_0xdfaac1));const _0x4725fa=_0x1133fd(_0x441eb1(0x1e0));if(_0x4725fa)_0x422f9d[_0x441eb1(0x1d4)][_0x441eb1(0x19f)]({'content':_0x4725fa})[_0x441eb1(0x1ed)](_0x5ac989=>console[_0x441eb1(0x206)](_0x1d4a20+_0x441eb1(0x1d3),_0x5ac989));}}catch(_0x473f34){console['error'](_0x1d4a20+_0x441eb1(0x1f8),_0x473f34),await _0x458dd4[_0x441eb1(0x211)]({'content':_0x441eb1(0x21b),'embeds':[],'files':[]})[_0x441eb1(0x1ed)](()=>{});}finally{this[_0x441eb1(0x1b3)](_0x4db040);}},'mod'(){}});
+module.exports = {
+  /*************************************************************************************************
+  *                                                                                                *
+  *                                        PORTFOLIO MOD                                           *
+  *                                       Autor: euforia.44                                        *
+  *                                         Wersja: 7.1.0                                          *
+  *                                                                                                *
+  *   Ten mod i jego kod źródłowy są własnością intelektualną autora.                               *
+  *   Zabrania się redystrybucji, modyfikacji lub sprzedaży bez wyraźnej zgody autora.              *
+  *                                                                                                *
+  *************************************************************************************************/
+
+  name: "Portfolio Mod",
+  displayName: "Portfolio Mod",
+  section: "Canvas",
+  author: "euforia.44",
+  version: "7.1.0",
+  short_description: "Zaawansowany generator grafik portfolio z licznymi opcjami personalizacji.",
+
+  subtitle(data) {
+    return "Generuje profesjonalną grafikę portfolio.";
+  },
+
+  fields: [
+    "requiredRoleID", "embedTitle", "embedDesc", "embedColor",
+    "realizatorField", "dlaKogoField", "secondMessageImageURL", "targetChannelID",
+    "mainText", "fontPath", "fontSize", "fontColor", "textVerticalAlign", "reactionEmoji",
+    "textShadowColor", "textShadowBlur", "textShadowOffsetX", "textShadowOffsetY",
+    "topLayerImageURL", "mainImageScale", "cornerRadius",
+    "shadowColor", "shadowBlur", "shadowOffsetX", "shadowOffsetY", "backgroundImageURL",
+    "watermarkTransparency"
+  ],
+
+  html(isEvent, data) {
+    return `
+      <div style="padding: 10px;">
+        <tab-system>
+          <tab label="Settings 1" icon="cogs">
+            <div style="padding: 10px;">
+                <div style="width: 100%; margin-bottom: 12px;">
+                    <label>ID Roli z Uprawnieniami (zostaw puste, aby wszyscy mogli używać)</label>
+                    <input id="requiredRoleID" class="round" type="text" placeholder="Wklej tutaj ID roli...">
+                </div>
+                <div style="width: 100%; margin-bottom: 12px;">
+                    <label>ID Kanału do Wysyłki (zostaw puste, aby wysyłać na obecnym kanale)</label>
+                    <input id="targetChannelID" class="round" type="text" placeholder="Wklej tutaj ID kanału...">
+                </div>
+                <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+                    <div style="width: 60%;"><label>Tytuł Embedu</label><input id="embedTitle" class="round" type="text" value="PORTFOLIO"></div>
+                    <div style="width: 40%;"><label>Kolor Embedu</label><input id="embedColor" class="round" type="text" value="#ea29d1"></div>
+                </div>
+                <div style="margin-bottom: 12px;">
+                  <label>Opis Embedu</label><textarea id="embedDesc" class="round" rows="2" style="width: 100%; resize: vertical;">Nowa praca już wleciała! Podoba się? Zostaw reakcję!</textarea>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <div style="width: 50%;"><label>Pole "Wykonane przez"</label><input id="realizatorField" class="round" type="text" value="\${slashParams('Wykonawca')}"></div>
+                    <div style="width: 50%;"><label>Pole "Dla kogo"</label><input id="dlaKogoField" class="round" type="text" value="\${slashParams('dlakogo')}"></div>
+                </div>
+            </div>
+          </tab>
+
+          <tab label="Settings 2" icon="font">
+            <div style="padding: 10px;">
+              <label>Tekst na Obrazie</label>
+              <input id="mainText" class="round" type="text" value="GRAFIKA" style="margin-bottom: 8px;">
+              <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+                <div style="flex-grow: 1;"><label>Czcionka</label><input id="fontPath" class="round" type="text" value="fonts/proxima.otf"></div>
+                <div style="width: 90px;"><label>Maks. Rozmiar</label><input id="fontSize" class="round" type="number" value="180"></div>
+                <div style="width: 90px;"><label>Kolor</label><input id="fontColor" class="round" type="text" value="#FFFFFF"></div>
+              </div>
+              <div style="margin-top: 8px; margin-bottom: 12px;"><label><b>Cień dla Tekstu</b></label></div>
+              <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+                <div style="width: 25%;"><label>Kolor</label><input id="textShadowColor" class="round" type="text" value="#000000"></div>
+                <div style="width: 25%;"><label>Rozmycie</label><input id="textShadowBlur" class="round" type="number" value="5"></div>
+                <div style="width: 25%;"><label>Offset X</label><input id="textShadowOffsetX" class="round" type="number" value="2"></div>
+                <div style="width: 25%;"><label>Offset Y</label><input id="textShadowOffsetY" class="round" type="number" value="2"></div>
+              </div>
+              <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+                <div style="width: 50%;">
+                  <label>Wyrównanie Tekstu w Pionie</label>
+                  <select id="textVerticalAlign" class="round">
+                      <option value="top" selected>Góra</option>
+                      <option value="bottom">Dół</option>
+                  </select>
+                </div>
+                <div style="width: 50%;">
+                  <label>Reakcja Bota (Emoji)</label>
+                  <input id="reactionEmoji" class="round" type="text" value="🔥">
+                </div>
+              </div>
+              <div>
+                  <label>URL Obrazu w drugiej wiadomości</label>
+                  <input id="secondMessageImageURL" class="round" type="text" placeholder="Domyślnie puste">
+              </div>
+            </div>
+          </tab>
+
+          <tab label="Obraz" icon="image">
+            <div style="padding: 10px;">
+              <div style="margin-bottom: 15px;"><label><b>Warstwa Ramki</b></label><input id="topLayerImageURL" class="round" type="text" placeholder="Domyślnie puste"></div>
+              <div style="margin-bottom: 15px;">
+                <div style="display: flex; gap: 10px; margin-top: 8px;">
+                  <div style="width: 50%;"><label>Skala Grafiki (%)</label><input id="mainImageScale" class="round" type="number" value="60"></div>
+                  <div style="width: 50%;"><label>Zaokrąglenie (px)</label><input id="cornerRadius" class="round" type="number" value="50"></div>
+                </div>
+                <div style="margin-top: 8px;"><label><b>Cień dla Grafiki</b></label></div>
+                <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+                  <div style="width: 25%;"><label>Kolor</label><input id="shadowColor" class="round" type="text" value="#000000"></div>
+                  <div style="width: 25%;"><label>Rozmycie</label><input id="shadowBlur" class="round" type="number" value="15"></div>
+                  <div style="width: 25%;"><label>Offset X</label><input id="shadowOffsetX" class="round" type="number" value="0"></div>
+                  <div style="width: 25%;"><label>Offset Y</label><input id="shadowOffsetY" class="round" type="number" value="10"></div>
+                </div>
+                <div style="width: 50%;"><label>Przezroczystość Znaku Wodnego (%)</label><input id="watermarkTransparency" class="round" type="number" value="35"></div>
+              </div>
+              <div><label><b>Warstwa Tła</b></label><input id="backgroundImageURL" class="round" type="text" value="https://cdn.discordapp.com/attachments/1384134507980132412/1391228184007282820/tloportfolio.png?ex=686b21b6&is=6869d036&hm=62d9d0ca73b3bd1428f65ac1f425de097c36c73dcdafc7e118ce9c48347c69fb&"></div>
+            </div>
+          </tab>
+        </tab-system>
+      </div>
+    `;
+  },
+
+  async action(cache) {
+    const { AttachmentBuilder, EmbedBuilder, MessageFlags } = require("discord.js");
+    const Canvas = require("canvas");
+    const sharp = require('sharp');
+    const path = require("path");
+
+    const data = cache.actions[cache.index];
+    const getVal = (field) => this.evalMessage(data[field], cache);
+    const { interaction } = cache;
+    const MOD_NAME = "[Portfolio Mod]";
+
+    const defaults = {
+        embedColor: "#ea29d1", mainImageScale: 60, cornerRadius: 50,
+        shadowColor: "#000000", shadowBlur: 15, shadowOffsetX: 0, shadowOffsetY: 10,
+        fontPath: "fonts/proxima.otf", fontSize: 180, fontColor: "#FFFFFF",
+        textVerticalAlign: "top", watermarkTransparency: 35,
+        textShadowColor: "#000000", textShadowBlur: 0, textShadowOffsetX: 0, textShadowOffsetY: 0,
+    };
+    
+    const parseIntWithDefault = (value, fallback) => {
+        const parsed = parseInt(value, 10);
+        return isNaN(parsed) ? fallback : parsed;
+    };
+
+    const getFittingFontSize = (ctx, text, style, initialSize, maxWidth) => {
+        let fontSize = initialSize;
+        do {
+            ctx.font = `${style} ${fontSize}px "CustomFont", sans-serif`;
+            if (ctx.measureText(text).width <= maxWidth) return fontSize;
+            fontSize -= 5;
+        } while (fontSize > 10);
+        return fontSize;
+    };
+
+    if (interaction && typeof interaction.deferReply === 'function' && !interaction.deferred) {
+      try {
+        await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+      } catch (e) { return console.error(`${MOD_NAME} Nie udało się odroczyć odpowiedzi:`, e); }
+    }
+    
+    const requiredRoleID = getVal("requiredRoleID");
+    if (requiredRoleID && interaction.member && !interaction.member.roles.cache.has(requiredRoleID)) {
+      await interaction.editReply({ content: "Nie masz uprawnień do użycia tej komendy." }).catch(e => console.error(e));
+      return this.callNextAction(cache);
+    }
+
+    try {
+      const canvasWidth = 1920;
+      const canvasHeight = 1080;
+      const canvas = Canvas.createCanvas(canvasWidth, canvasHeight);
+      const ctx = canvas.getContext("2d");
+
+      // Warstwa 1 Tło
+      const backgroundImageURL = getVal("backgroundImageURL");
+      if (backgroundImageURL) {
+        try {
+          const background = await Canvas.loadImage(backgroundImageURL);
+          ctx.drawImage(background, 0, 0, canvasWidth, canvasHeight);
+        } catch (error) { console.error(`${MOD_NAME} Błąd ładowania obrazu tła.`, error); }
+      }
+
+      // Warstwa 2 Załącznik
+      const imageAttachment = interaction.options.getAttachment('zalacznik');
+      let mainImageY = canvasHeight / 2, mainImageHeight = 0;
+
+      if (imageAttachment?.url) {
+        try {
+          const imageBuffer = await (await fetch(imageAttachment.url)).arrayBuffer();
+          const pngBuffer = await sharp(Buffer.from(imageBuffer)).toFormat('png').toBuffer();
+          const mainImage = await Canvas.loadImage(pngBuffer);
+          const scale = parseIntWithDefault(getVal("mainImageScale"), defaults.mainImageScale) / 100;
+          const radius = parseIntWithDefault(getVal("cornerRadius"), defaults.cornerRadius);
+          const boxWidth = canvasWidth * Math.max(0.1, Math.min(1, scale));
+          const boxHeight = canvasHeight * Math.max(0.1, Math.min(1, scale));
+          const boxAspectRatio = boxWidth / boxHeight;
+          const imageAspectRatio = mainImage.width / mainImage.height;
+          let destWidth, destHeight;
+          if (imageAspectRatio > boxAspectRatio) {
+            destWidth = boxWidth;
+            destHeight = boxWidth / imageAspectRatio;
+          } else {
+            destHeight = boxHeight;
+            destWidth = boxHeight * imageAspectRatio;
+          }
+          const x = (canvasWidth - destWidth) / 2;
+          const y = (canvasHeight - destHeight) / 2;
+          mainImageY = y;
+          mainImageHeight = destHeight;
+          ctx.save();
+          ctx.beginPath();
+          ctx.moveTo(x + radius, y); ctx.lineTo(x + destWidth - radius, y); ctx.arcTo(x + destWidth, y, x + destWidth, y + radius, radius);
+          ctx.lineTo(x + destWidth, y + destHeight - radius); ctx.arcTo(x + destWidth, y + destHeight, x + destWidth - radius, y + destHeight, radius);
+          ctx.lineTo(x + radius, y + destHeight); ctx.arcTo(x, y + destHeight, x, y + destHeight - radius, radius);
+          ctx.lineTo(x, y + radius); ctx.arcTo(x, y, x + radius, y, radius); ctx.closePath();
+          const shadowBlur = parseIntWithDefault(getVal("shadowBlur"), defaults.shadowBlur);
+          if (shadowBlur > 0) {
+            ctx.shadowColor = getVal("shadowColor") || defaults.shadowColor; ctx.shadowBlur = shadowBlur;
+            ctx.shadowOffsetX = parseIntWithDefault(getVal("shadowOffsetX"), defaults.shadowOffsetX); ctx.shadowOffsetY = parseIntWithDefault(getVal("shadowOffsetY"), defaults.shadowOffsetY);
+            ctx.fillStyle = "rgba(0,0,0,0.01)"; ctx.fill();
+          }
+          ctx.clip(); ctx.drawImage(mainImage, x, y, destWidth, destHeight); ctx.restore();
+        } catch (error) { console.error(`${MOD_NAME} Błąd rysowania grafiki głównej.`, error); }
+      }
+      
+      const unsafeFontPath = getVal("fontPath") || defaults.fontPath;
+      const botDir = process.cwd();
+      const safeFontPath = path.resolve(botDir, unsafeFontPath);
+
+      if (!safeFontPath.startsWith(botDir)) {
+          console.error(`${MOD_NAME} Niedozwolona ścieżka czcionki: ${unsafeFontPath}`);
+      } else {
+        try {
+            const FONT_FAMILY = "CustomFont";
+            Canvas.registerFont(safeFontPath, { family: FONT_FAMILY });
+
+            // Warstwa Tekstu
+            const mainText = getVal("mainText");
+            if (mainText) {
+                ctx.save();
+                const textShadowBlur = parseIntWithDefault(getVal("textShadowBlur"), defaults.textShadowBlur);
+                if (textShadowBlur > 0) {
+                    ctx.shadowColor = getVal("textShadowColor") || defaults.textShadowColor; ctx.shadowBlur = textShadowBlur;
+                    ctx.shadowOffsetX = parseIntWithDefault(getVal("textShadowOffsetX"), defaults.textShadowOffsetX); ctx.shadowOffsetY = parseIntWithDefault(getVal("textShadowOffsetY"), defaults.textShadowOffsetY);
+                }
+                const initialFontSize = parseIntWithDefault(getVal("fontSize"), defaults.fontSize);
+                const fittingFontSize = getFittingFontSize(ctx, mainText, "bold", initialFontSize, canvasWidth * 0.9);
+                ctx.font = `bold ${fittingFontSize}px "${FONT_FAMILY}", sans-serif`;
+                ctx.fillStyle = getVal("fontColor") || defaults.fontColor;
+                ctx.textAlign = "center"; ctx.textBaseline = "middle";
+                const verticalAlign = getVal("textVerticalAlign") || defaults.textVerticalAlign;
+                const textY = verticalAlign === 'bottom' ? (mainImageY + mainImageHeight) + ((canvasHeight - (mainImageY + mainImageHeight)) / 2) : mainImageY / 2;
+                ctx.fillText(mainText, canvasWidth / 2, textY);
+                ctx.restore();
+            }
+            
+            // Warstwa 1 Dodatkowa (Ramka)
+            const topLayerImageURL = getVal("topLayerImageURL");
+            if (topLayerImageURL) {
+              try {
+                const topImage = await Canvas.loadImage(topLayerImageURL);
+                ctx.drawImage(topImage, 0, 0, canvasWidth, canvasHeight);
+              } catch (error) { console.error(`${MOD_NAME} Błąd ładowania ramki.`, error); }
+            }
+
+            // Watermark Warstwa
+            let watermarkText;
+            try {
+              watermarkText = interaction.options.getString('watermark');
+            } catch (error) {
+              if (error.code === 'CommandInteractionOptionType') console.error(`${MOD_NAME} Błąd konfiguracji: Typ opcji 'watermark' musi być 'String' (Tekst).`);
+            }
+      
+            if (watermarkText) {
+                const transparencyValue = parseIntWithDefault(getVal("watermarkTransparency"), defaults.watermarkTransparency);
+                ctx.globalAlpha = Math.max(0, Math.min(100, transparencyValue)) / 100;
+                const fittingWatermarkSize = getFittingFontSize(ctx, watermarkText, "bold", 30, canvasWidth * 0.4);
+                ctx.font = `bold ${fittingWatermarkSize}px "${FONT_FAMILY}", sans-serif`;
+                ctx.fillStyle = "#FFFFFF"; ctx.textAlign = "right"; ctx.textBaseline = "bottom";
+                ctx.fillText(watermarkText, canvasWidth - 20, canvasHeight - 20);
+                ctx.globalAlpha = 1.0;
+            }
+        } catch (error) { console.error(`${MOD_NAME} Błąd podczas operacji na tekście.`, error); }
+      }
+      
+      const attachment = new AttachmentBuilder(canvas.toBuffer("image/png"), { name: "portfolio.png" });
+      const { guild } = interaction;
+      const serverIcon = guild.iconURL({ extension: "png", size: 128 });
+      const timestamp = new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' });
+      const colorInput = getVal("embedColor");
+
+      const embed = new EmbedBuilder()
+          .setColor(typeof colorInput === 'string' && colorInput.startsWith('#') ? colorInput : defaults.embedColor)
+          .setImage("attachment://portfolio.png").setTitle(getVal("embedTitle") || null).setDescription(getVal("embedDesc") || null)
+          .setThumbnail(serverIcon).setFooter({ text: `${guild.name} • ${timestamp}`, iconURL: serverIcon });
+
+      const realizator = getVal("realizatorField");
+      const dlaKogo = getVal("dlaKogoField");
+      if (realizator || dlaKogo) {
+        embed.addFields({ name: "Wykonane przez:", value: realizator || " ", inline: true }, { name: "Dla kogo:", value: dlaKogo || " ", inline: true });
+      }
+      
+      const messagePayload = { embeds: [embed], files: [attachment] };
+      
+      const targetChannelID = getVal("targetChannelID");
+      const finalChannel = targetChannelID ? await guild.channels.fetch(targetChannelID).catch(() => interaction.channel) : interaction.channel;
+
+      const sentMessage = await finalChannel.send(messagePayload);
+      
+      await interaction.editReply({ content: 'Grafika została pomyślnie wysłana.', embeds: [], files: [] });
+      
+      if (sentMessage) {
+        const reactionEmoji = getVal("reactionEmoji");
+        if (reactionEmoji) sentMessage.react(reactionEmoji).catch(e => console.error(`${MOD_NAME} Nie udało się dodać reakcji:`, e));
+        const secondImageURL = getVal("secondMessageImageURL");
+        if (secondImageURL) sentMessage.channel.send({ content: secondImageURL }).catch(e => console.error(`${MOD_NAME} Nie udało się wysłać drugiej wiadomości:`, e));
+      }
+
+    } catch (error) {
+      console.error(`${MOD_NAME} Wystąpił krytyczny błąd:`, error);
+      await interaction.editReply({ content: "Wystąpił nieoczekiwany błąd. Sprawdź konsolę bota.", embeds: [], files: [] }).catch(() => {});
+    } finally {
+      this.callNextAction(cache);
+    }
+  },
+
+  mod() {}
+};
