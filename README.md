@@ -54,8 +54,8 @@ Mod został stworzony i jest rozwijany przez euforia.44.
 
 # [PORTFOLIO MOD]
 author: euforia.44
-wersja: 7.4.0
+wersja: 7.5.0
 
 Zmiany:
 
-- Upewniono się, że wszystkie wartości domyślne i funkcjonalności z poprzednich wersji są zachowane.
+- brak
