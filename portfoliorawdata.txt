@@ -29,9 +29,8 @@
       "embedColor": "#ea29d1",
       "realizatorField": "${slashParams('Wykonawca')}",
       "dlaKogoField": "${slashParams('dlakogo')}",
-      "secondMessageImageURL": "",
+      "secondMessageImageURL": "https://cdn.discordapp.com/attachments/1384134507980132412/1384134537495445554/evbanner.png?ex=686b087d&is=6869b6fd&hm=d8be9ecac60ff1daa1bd5e79a0986963a2afa4f7a9406c98f07e76e685cf8746&",
       "targetChannelID": "",
-      "mainText": "GRAFIKA",
       "fontPath": "fonts/proxima.otf",
       "fontSize": "180",
       "fontColor": "#FFFFFF",
@@ -41,7 +40,7 @@
       "textShadowBlur": "5",
       "textShadowOffsetX": "2",
       "textShadowOffsetY": "2",
-      "topLayerImageURL": "",
+      "topLayerImageURL": "https://cdn.discordapp.com/attachments/1384134507980132412/1391433502746087514/fale.png?ex=686be0ee&is=686a8f6e&hm=4a28d7a91bb2ce6816364459287e664c0ffe35186ee5a71b17aea1a617d708e2&",
       "mainImageScale": "60",
       "cornerRadius": "50",
       "shadowColor": "#000000",
@@ -56,6 +55,13 @@
   "comType": "4",
   "restriction": "1",
   "parameters": [
+    {
+      "name": " Tekst na grafice",
+      "description": "Grafika itd",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
     {
       "name": "Wykonawca",
       "description": "Osoba, która wykonała pracę.",
