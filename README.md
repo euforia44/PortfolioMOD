@@ -1,3 +1,4 @@
+```Kompatybilne z Discord Bot Maker | v14 (nie testowano na wersji v13)```
 # Portfolio MOD
 Dodaj swoją pracę do portfolio! Użyj komendy: /portfolio [wykonawca] [dla kogo] [załącznik]
 ![{167B6681-F4A5-45AE-AB8B-40D0DF72157F}](https://github.com/user-attachments/assets/cc5aadfb-61ed-463b-8ec3-2dc8b7b47858)
