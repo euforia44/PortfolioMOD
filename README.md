@@ -54,12 +54,11 @@ Mod został stworzony i jest rozwijany przez euforia.44.
 
 # [PORTFOLIO MOD]
 author: euforia.44
-wersja: 7.1.0
+wersja: 7.2.0
 
 Zmiany:
 
-- Naprawiono krytyczny błąd `Unknown Message` poprzez całkowitą przebudowę logiki wysyłania odpowiedzi. Mod teraz zawsze wysyła nową, publiczną wiadomość, a następnie aktualizuje efemeryczną odpowiedź, co zapewnia maksymalną stabilność.
-- Zmieniono kolejność rysowania warstw na grafice zgodnie z nowymi wymaganiami (Tło -> Załącznik -> Tekst -> Ramka -> Znak Wodny).
-- Dodano nową funkcję: Cień dla Tekstu. W zakładce "Settings 2" można teraz skonfigurować kolor, rozmycie i pozycję cienia dla głównego napisu.
-- Uproszczono kod odpowiedzialny za wysyłanie wiadomości na kanał docelowy, czyniąc go bardziej odpornym na błędy.
-- Zaktualizowano interfejs moda, aby odzwierciedlał nowe funkcje i zmiany.
+- Naprawiono błąd sieciowy `ConnectTimeoutError` poprzez wydłużenie czasu oczekiwania na pobranie obrazka do 30 sekund.
+- Zaimplementowano ulepszone, bardziej szczegółowe logowanie błędów sieciowych w konsoli, co ułatwia diagnozowanie problemów.
+- Dodano bardziej informacyjne komunikaty o błędach dla użytkownika w przypadku problemów z pobieraniem obrazów.
+- Kod został uproszczony i zoptymalizowany dla większej stabilności.
