@@ -29,33 +29,27 @@ watermark - Typ: String (Opcjonalny)
 ![{662A3C82-2776-49BC-8116-1CA7D752E644}](https://github.com/user-attachments/assets/927032d3-426c-4ed6-ac06-89b483193e89)
 
 ## Krok 4: Konfiguracja Akcji
-Dodaj akcję "Portfolio Mod" do swojej nowej komendy. W ustawieniach akcji znajdziesz trzy zakładki:
-![{4181A048-36E4-43A0-B6A3-FF80192F390B}](https://github.com/user-attachments/assets/16fd966e-5a5b-47f2-a640-b73be7fc5a98)
-### Settings 1:
+Dodaj akcję "Portfolio Mod" do swojej nowej komendy. W ustawieniach akcji znajdziesz cztery zakładki:
+<img width="652" height="111" alt="{90869559-86C6-4EC8-9C66-CCC7DCD26512}" src="https://github.com/user-attachments/assets/9c5b65f7-ac58-4c11-9085-5685abe84fc2" />
+
+### Konfiguracja:
 ID Roli z Uprawnieniami: Wklej ID roli, która może używać komendy. Zostaw puste, aby zezwolić wszystkim.
 ID Kanału do Wysyłki: Wklej ID kanału, na który mają być wysyłane grafiki. Zostaw puste, aby bot odpowiadał na kanale, gdzie użyto komendy.
 Możesz tu również dostosować wygląd embedu (tytuł, opis, kolor).
-### Settings 2:
-Skonfiguruj główny tekst na obrazie (treść, czcionka, rozmiar, kolor).
-Wyrównanie Tekstu w Pionie: Wybierz, czy tekst ma się pojawić nad główną grafiką (Góra), czy pod nią (Dół).
-### Obraz:
+### Styl Tekstu:
+Główny tekst jest pobierany z opcji komendy slash o nazwie tekst_grafiki.
+Skonfiguruj główny tekst na obrazie ( czcionka, rozmiar, kolor).
+Skonfiguruj URL obrazu w drugiej wiadomości!
+### Wygląd Grafiki:
 Dostosuj wygląd głównej grafiki (skala, zaokrąglenie, cień).
 Przezroczystość Znaku Wodnego: Ustaw widoczność znaku wodnego w procentach (np. 35%).
 Zmień domyślne tło lub ramkę, wklejając linki URL.
-![{EA0BF29D-4F8D-4E72-89D7-97407D5E907E}](https://github.com/user-attachments/assets/8eb21312-f521-4483-9b5b-1aaadea31645)
+<img width="654" height="462" alt="{B03D03FF-F048-475D-9E40-EC651940EC31}" src="https://github.com/user-attachments/assets/ffcc93ed-dfa3-4594-97f0-9a984cce22a0" />
 
 #  🚀 Użycie Komendy
 Po skonfigurowaniu, użyj komendy na swoim serwerze Discord:
-/portfolio wykonawca: @uzytkownik1 dla_kogo: @uzytkownik2 zalacznik: [TWOJA_GRAFIKA.PNG] watermark: [TWOJ_WATERMARK.PNG]
-![{A98551A9-02C0-4BBA-BC49-7E312FF02A75}](https://github.com/user-attachments/assets/179e317a-22d9-49ba-8036-f7817de68cf5)
+/portfolio wykonawca: @uzytkownik1 dla_kogo: @uzytkownik2 zalacznik: [TWOJA_GRAFIKA.PNG] watermark: [TWOJ_TEKST]
+<img width="850" height="641" alt="{456FD56F-691F-4AB3-B37F-AD112DA5C9F6}" src="https://github.com/user-attachments/assets/4e198c99-8bdc-4f3e-8aa6-eb33ec1cddb0" />
 Bot przetworzy dane i wyśle profesjonalnie wyglądającą grafikę portfolio!
 # ❤️ Autor
 Mod został stworzony i jest rozwijany przez euforia.44.
-
-# [PORTFOLIO MOD]
-author: euforia.44
-wersja: 7.5.0
-
-Zmiany:
-
-- brak
