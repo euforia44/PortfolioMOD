@@ -1,11 +1,23 @@
 module.exports = {
+  /*************************************************************************************************
+  *                                                                                                *
+  *                                        PORTFOLIO MOD                                           *
+  *                                     -------------------                                        *
+  *                                                                                                *
+  *                        Całość kodu została stworzona przez: euforia.44  & AI                   *
+  *                                        Wersja: 8.0.0                                           *
+  *                                                                                                *
+  *    			      Mod i jego kod źródłowy są własnością intelektualną autora. 				   *
+  *					    	Zabrania się sprzedaży bez wyraźnej zgody.                             *
+  *                                                                                                *
+  *************************************************************************************************/
 
   name: "Portfolio Mod",
-  displayName: "Portfolio",
+  displayName: "Portfolio Mod v8",
   section: "##Euforia Mods",
-  author: "euforia.44 x AI",
+  author: "euforia.44 (poprawki i feat. by AI)",
   version: "8.0.0",
-  short_description: "Zaawansowany generator grafik portfolio",
+  short_description: "Zaawansowany generator grafik portfolio z licznymi opcjami personalizacji.",
 
   subtitle(data) {
     return "Generuje profesjonalną grafikę portfolio z przyciskami.";
