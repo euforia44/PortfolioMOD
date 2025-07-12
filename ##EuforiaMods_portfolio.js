@@ -316,7 +316,7 @@ module.exports = {
       const { guild } = interaction;
       const embed = new EmbedBuilder()
           .setColor(getVal("embedColor") || '#ea29d1').setImage("attachment://portfolio.png").setTitle(getVal("embedTitle") || null).setDescription(getVal("embedDesc") || null)
-          .setThumbnail(guild.iconURL({ extension: "png", size: 128 })).setFooter({ text: `${guild.name} • ${new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' })} - by euforia.44`, iconURL: guild.iconURL() });
+          .setThumbnail(guild.iconURL({ extension: "png", size: 128 })).setFooter({ text: `${guild.name} • ${new Date().toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' })} Skibidi Rizzler Toilet GYAT!`, iconURL: guild.iconURL() });
       if (getVal("realizatorField") || getVal("dlaKogoField")) {
         embed.addFields({ name: "Wykonane przez:", value: getVal("realizatorField") || " ", inline: true }, { name: "Dla kogo:", value: getVal("dlaKogoField") || " ", inline: true });
       }
